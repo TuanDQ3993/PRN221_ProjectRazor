@@ -2017,11 +2017,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\FPT\\KY 7\\PRN221\\project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj",
+      "projectUniqueName": "D:\\FPT\\KY 7\\PRN221\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj",
       "projectName": "ProjectPRN221_LIBManagement",
-      "projectPath": "D:\\FPT\\KY 7\\PRN221\\project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj",
+      "projectPath": "D:\\FPT\\KY 7\\PRN221\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj",
       "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-      "outputPath": "D:\\FPT\\KY 7\\PRN221\\project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\obj\\",
+      "outputPath": "D:\\FPT\\KY 7\\PRN221\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
