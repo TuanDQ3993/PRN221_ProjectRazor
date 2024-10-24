@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProjectPRN221_LIBManagement")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+77fbdd1f4a3ffc50c7af561a2c53b8bf128c0e68")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3f105f0eb5620278f44330bebfce6644797c47bb")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProjectPRN221_LIBManagement")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProjectPRN221_LIBManagement")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
