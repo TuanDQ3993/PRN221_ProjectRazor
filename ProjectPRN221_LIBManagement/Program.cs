@@ -1,8 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using ProjectPRN221_LIBManagement.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-
+builder.Services.AddDbContext<PRN221_LibContext>(option =>
+{
+    option.UseSqlServer(builder.Configuration.GetConnectionString("value"));
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -7,8 +7,10 @@ namespace ProjectPRN221_LIBManagement.Models
 {
     public partial class PRN221_LibContext : DbContext
     {
+        public static PRN221_LibContext Ins = new PRN221_LibContext();
         public PRN221_LibContext()
         {
+            if (Ins == null) Ins = this;
         }
 
         public PRN221_LibContext(DbContextOptions<PRN221_LibContext> options)
@@ -27,11 +29,14 @@ namespace ProjectPRN221_LIBManagement.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            if (!optionsBuilder.IsConfigured)
-            {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=localhost;Initial Catalog=PRN221_Lib; Trusted_Connection=SSPI;Encrypt=false;TrustServerCertificate=true");
-            }
+            var config = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();
+
+            if (!optionsBuilder.IsConfigured) { optionsBuilder.UseSqlServer(config.GetConnectionString("value")); }
+            //            if (!optionsBuilder.IsConfigured)
+            //            {
+            //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+            //                optionsBuilder.UseSqlServer("Data Source=localhost;Initial Catalog=prn211_1; Trusted_Connection=SSPI;Encrypt=false;TrustServerCertificate=true");
+            //            }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

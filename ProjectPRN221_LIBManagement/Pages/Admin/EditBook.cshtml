@@ -1,0 +1,145 @@
+﻿@page
+@model ProjectPRN221_LIBManagement.Pages.Admin.EditBookModel
+@using ProjectPRN221_LIBManagement.Models;
+@{
+    Layout = null;
+}
+
+
+
+ <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+        background-color: #f5f5f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+    }
+
+    .form-container {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 500px;
+    }
+
+    h1 {
+        color: #333;
+        margin-bottom: 25px;
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        color: #555;
+        font-weight: 500;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: border-color 0.3s;
+    }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+        font-size: 16px;
+        font-weight: 500;
+        transition: background-color 0.3s;
+    }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+    .required {
+        color: red;
+        margin-left: 3px;
+    }
+
+    input:invalid {
+        border-color: #ff6b6b;
+    }
+</style>
+
+    <div class="form-container">
+        <h1>Update Books</h1>
+    <form id="updateBook" method="post">
+        <div class="form-group">
+            <label for="title">Title<span class="required">*</span></label>
+            <input type="text" id="title" name="books.Title" class="form-control" asp-for="books.Title" value="@Model.books.Title" required>
+        </div>
+
+        <input type="hidden" asp-for="books.BookId" value="@Model.books.BookId" required>
+
+        <div class="form-group">
+            <label for="authorId">Authors</label>
+            <select id="authorId" name="books.AuthorId" class="form-control" asp-for="books.AuthorId" asp-items="@(new SelectList(Model.authors, "AuthorId", "AuthorName", Model.books.AuthorId))" required>
+                <option value="">Select an author</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="publisherId">Publishers</label>
+            <select id="publisherId" name="books.PublisherId" class="form-control" asp-for="books.PublisherId" asp-items="@(new SelectList(Model.publishers, "PublisherId", "PublisherName", Model.books.PublisherId))" required>
+                <option value="">Select a publisher</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="yearPublished">Year Published</label>
+            <input type="number" id="yearPublished" name="books.YearPublished" min="1800" max="2024" class="form-control" asp-for="books.YearPublished" required>
+        </div>
+
+        <div class="form-group">
+            <label for="isbn">ISBN</label>
+            <input type="text" id="isbn" name="books.Isbn" pattern="[0-9-]{10,17}" class="form-control" asp-for="books.Isbn" required>
+        </div>
+
+        <div class="form-group">
+            <label for="categoryId">Category</label>
+            <select id="categoryId" name="books.CategoryId" class="form-control" asp-for="books.CategoryId" asp-items="@(new SelectList(Model.categories, "CategoryId", "CategoryName", Model.books.CategoryId))" required>
+                <option value="">Select a category</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" name="books.Quantity" min="0" class="form-control" asp-for="books.Quantity" required>
+        </div>
+
+        <button type="submit">Update Book</button>
+    </form>
+
+    </div>
+ 
