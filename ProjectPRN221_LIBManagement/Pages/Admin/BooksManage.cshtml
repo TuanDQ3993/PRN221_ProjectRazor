@@ -73,24 +73,33 @@
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top: 93px;">
                 <div class="filter1">
-                    <form action="filteruser">
+                    <form asp-page="BooksManage" method="get">
                         <div class="filter">
                             <a class="texta" style=" color: #454444f7;">Filter:</a>
 
-                            <select name="gender">
-                                <option>Gender</option>
-                                <option value="Female">Female</option>
-                                <option value="Male">Male</option>
+                            <select name="publisherId">
+                                <option value="0">Select Publisher</option>
+                                @foreach (var emp in Model.publishers)
+                                {
+                                    <option value="@emp.PublisherId" selected="@(emp.PublisherId == Model.pId)">@emp.PublisherName</option>
+                                }
                             </select>
                             <div>
-                                <select name="role">
-                                    <option>Role</option>
-
+                                <select name="authorId">
+                                    <option value="0">select Author</option>
+                                    @foreach(var emp in Model.authors)
+                                    {
+                                        <option value="@emp.AuthorId" selected="@(emp.AuthorId == Model.aId)">@emp.AuthorName</option>
+                                    }
                                 </select>
                             </div>
                             <div>
-                                <select name="status">
-                                    <option>Status</option>
+                                <select name="categoryId">
+                                    <option value="0">select Category</option>
+                                    @foreach(var emp in Model.categories)
+                                    {
+                                        <option value="@emp.CategoryId" selected="@(emp.CategoryId == Model.cid)"> @emp.CategoryName</option>
+                                    }
 
                                 </select>
                             </div>
@@ -101,8 +110,8 @@
                         <a asp-page="AddBook"><button type="button" class="btn btn-danger">Add User</button> </a>
                     </div>
                     <div class="input-group rounded search-p">
-                        <form action="searchuser">
-                            <input type="search" name="search" class="form-control rounded" placeholder="Search" value="${search}" aria-label="Search" aria-describedby="search-addon" style="max-width: 95%" />
+                        <form asp-page="BooksManage" method="get">
+                            <input type="search" name="searchString" class="form-control rounded" value="@Model.search" placeholder="Search"  aria-label="Search" aria-describedby="search-addon" style="max-width: 95%" />
                         </form>
                         <span class="input-group-text border-0" id="search-addon">
                             <i class="fas fa-search"></i>
@@ -116,14 +125,14 @@
                             <table class="table" id="userTable">
                                 <thead class="bg-light">
                                     <tr class="border-0">
-                                        <th class="border-0">BookID</th>
-                                        <th class="border-0">Title</th>
-                                        <th class="border-0">Author</th>
-                                        <th class="border-0">Publisher</th>
-                                        <th class="border-0">YearPublished</th>
-                                        <th class="border-0">ISBN</th>
-                                        <th class="border-0">Category</th>
-                                        <th class="border-0">Quantity</th>
+                                        <th class="border-0" onclick="sortTable(0)">BookID</th>
+                                        <th class="border-0" onclick="sortTable(1)">Title</th>
+                                        <th class="border-0" onclick="sortTable(2)">Author</th>
+                                        <th class="border-0" onclick="sortTable(3)">Publisher</th>
+                                        <th class="border-0" onclick="sortTable(4)">YearPublished</th>
+                                        <th class="border-0" onclick="sortTable(5)">ISBN</th>
+                                        <th class="border-0" onclick="sortTable(6)">Category</th>
+                                        <th class="border-0" onclick="sortTable(7)">Quantity</th>
                                         <th class="border-0">Feature</th>
                                     </tr>
                                 </thead>
@@ -176,7 +185,7 @@
         <script src="~/assets/vendor/charts/sparkline/spark-js.js"></script>
         <!-- dashboard sales js-->
         <script src="~/assets/libs/js/dashboard-sales.js"></script>
-        <!-- <script>
+        <script>
                                                                 function sortTable(colIndex) {
                                                                     var table = document.getElementById('userTable');
                                                                     var rows = table.rows;
@@ -229,10 +238,7 @@
                                                                     }
                                                                 }
 
-                                                                function confirmAction() {
-                                                                    return confirm("Are you sure you want to proceed with this action?");
-                                                                }
-        // JavaScript
+                                                          
 
 
-                </script> -->
+                </script>
