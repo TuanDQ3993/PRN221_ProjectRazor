@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj": {}
+    "D:\\workspace\\ki 7\\PRN221\\Project v2\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj": {}
   },
   "projects": {
-    "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj": {
+    "D:\\workspace\\ki 7\\PRN221\\Project v2\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj",
+        "projectUniqueName": "D:\\workspace\\ki 7\\PRN221\\Project v2\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj",
         "projectName": "ProjectPRN221_LIBManagement",
-        "projectPath": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\obj\\",
+        "projectPath": "D:\\workspace\\ki 7\\PRN221\\Project v2\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj",
+        "packagesPath": "C:\\Users\\PV\\.nuget\\packages\\",
+        "outputPath": "D:\\workspace\\ki 7\\PRN221\\Project v2\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PV\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -35,11 +34,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -72,24 +66,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.35, 6.0.35]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[6.0.35, 6.0.35]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.35, 6.0.35]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.35, 6.0.35]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -98,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

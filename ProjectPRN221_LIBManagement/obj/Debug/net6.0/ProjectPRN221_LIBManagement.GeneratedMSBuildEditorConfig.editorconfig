@@ -9,63 +9,91 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ProjectPRN221_LIBManagement
 build_property.RootNamespace = ProjectPRN221_LIBManagement
-build_property.ProjectDir = D:\hoc tap\PRN221\Project\PRN221_ProjectRazor\ProjectPRN221_LIBManagement\
+build_property.ProjectDir = D:\workspace\ki 7\PRN221\Project v2\PRN221_ProjectRazor\ProjectPRN221_LIBManagement\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\hoc tap\PRN221\Project\PRN221_ProjectRazor\ProjectPRN221_LIBManagement
+build_property.MSBuildProjectDirectory = D:\workspace\ki 7\PRN221\Project v2\PRN221_ProjectRazor\ProjectPRN221_LIBManagement
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/hoc tap/PRN221/Project/PRN221_ProjectRazor/ProjectPRN221_LIBManagement/Pages/Admin/AddBook.cshtml]
+[D:/workspace/ki 7/PRN221/Project v2/PRN221_ProjectRazor/ProjectPRN221_LIBManagement/Pages/Admin/AddAuthor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWRkQXV0aG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/workspace/ki 7/PRN221/Project v2/PRN221_ProjectRazor/ProjectPRN221_LIBManagement/Pages/Admin/AddBook.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWRkQm9vay5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/hoc tap/PRN221/Project/PRN221_ProjectRazor/ProjectPRN221_LIBManagement/Pages/Admin/BooksManage.cshtml]
+[D:/workspace/ki 7/PRN221/Project v2/PRN221_ProjectRazor/ProjectPRN221_LIBManagement/Pages/Admin/AddCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWRkQ2F0ZWdvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/workspace/ki 7/PRN221/Project v2/PRN221_ProjectRazor/ProjectPRN221_LIBManagement/Pages/Admin/AuthorsManage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQXV0aG9yc01hbmFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/workspace/ki 7/PRN221/Project v2/PRN221_ProjectRazor/ProjectPRN221_LIBManagement/Pages/Admin/BooksManage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQm9va3NNYW5hZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/hoc tap/PRN221/Project/PRN221_ProjectRazor/ProjectPRN221_LIBManagement/Pages/Admin/DeleteBook.cshtml]
+[D:/workspace/ki 7/PRN221/Project v2/PRN221_ProjectRazor/ProjectPRN221_LIBManagement/Pages/Admin/CategorysManage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ2F0ZWdvcnlzTWFuYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/workspace/ki 7/PRN221/Project v2/PRN221_ProjectRazor/ProjectPRN221_LIBManagement/Pages/Admin/DeleteBook.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cRGVsZXRlQm9vay5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/hoc tap/PRN221/Project/PRN221_ProjectRazor/ProjectPRN221_LIBManagement/Pages/Admin/EditBook.cshtml]
+[D:/workspace/ki 7/PRN221/Project v2/PRN221_ProjectRazor/ProjectPRN221_LIBManagement/Pages/Admin/EditAuthor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cRWRpdEF1dGhvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/workspace/ki 7/PRN221/Project v2/PRN221_ProjectRazor/ProjectPRN221_LIBManagement/Pages/Admin/EditBook.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cRWRpdEJvb2suY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/hoc tap/PRN221/Project/PRN221_ProjectRazor/ProjectPRN221_LIBManagement/Pages/Error.cshtml]
+[D:/workspace/ki 7/PRN221/Project v2/PRN221_ProjectRazor/ProjectPRN221_LIBManagement/Pages/Admin/EditCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cRWRpdENhdGVnb3J5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/workspace/ki 7/PRN221/Project v2/PRN221_ProjectRazor/ProjectPRN221_LIBManagement/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/hoc tap/PRN221/Project/PRN221_ProjectRazor/ProjectPRN221_LIBManagement/Pages/Index.cshtml]
+[D:/workspace/ki 7/PRN221/Project v2/PRN221_ProjectRazor/ProjectPRN221_LIBManagement/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/hoc tap/PRN221/Project/PRN221_ProjectRazor/ProjectPRN221_LIBManagement/Pages/Index1.cshtml]
+[D:/workspace/ki 7/PRN221/Project v2/PRN221_ProjectRazor/ProjectPRN221_LIBManagement/Pages/Index1.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgxLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/hoc tap/PRN221/Project/PRN221_ProjectRazor/ProjectPRN221_LIBManagement/Pages/Login.cshtml]
+[D:/workspace/ki 7/PRN221/Project v2/PRN221_ProjectRazor/ProjectPRN221_LIBManagement/Pages/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/hoc tap/PRN221/Project/PRN221_ProjectRazor/ProjectPRN221_LIBManagement/Pages/Privacy.cshtml]
+[D:/workspace/ki 7/PRN221/Project v2/PRN221_ProjectRazor/ProjectPRN221_LIBManagement/Pages/Login/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5cTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/workspace/ki 7/PRN221/Project v2/PRN221_ProjectRazor/ProjectPRN221_LIBManagement/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/hoc tap/PRN221/Project/PRN221_ProjectRazor/ProjectPRN221_LIBManagement/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[D:/workspace/ki 7/PRN221/Project v2/PRN221_ProjectRazor/ProjectPRN221_LIBManagement/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/hoc tap/PRN221/Project/PRN221_ProjectRazor/ProjectPRN221_LIBManagement/Pages/_ViewImports.cshtml]
+[D:/workspace/ki 7/PRN221/Project v2/PRN221_ProjectRazor/ProjectPRN221_LIBManagement/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/hoc tap/PRN221/Project/PRN221_ProjectRazor/ProjectPRN221_LIBManagement/Pages/_ViewStart.cshtml]
+[D:/workspace/ki 7/PRN221/Project v2/PRN221_ProjectRazor/ProjectPRN221_LIBManagement/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/hoc tap/PRN221/Project/PRN221_ProjectRazor/ProjectPRN221_LIBManagement/Pages/Shared/_Layout.cshtml]
+[D:/workspace/ki 7/PRN221/Project v2/PRN221_ProjectRazor/ProjectPRN221_LIBManagement/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-ecxmow15aq
