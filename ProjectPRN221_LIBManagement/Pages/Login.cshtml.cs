@@ -24,13 +24,14 @@ namespace ProjectPRN221_LIBManagement.Pages
 			{
 				if (user.Role != null)
 				{
-					if (user.Role == 1)
+                    HttpContext.Session.SetInt32("UserID", user.UserId);
+                    if (user.Role == 1)
 					{
 						return RedirectToPage("/Admin/BooksManage"); 
 					}
 					else
 					{
-						return Page();
+						return RedirectToPage("home");
 					}
 				}
 			}

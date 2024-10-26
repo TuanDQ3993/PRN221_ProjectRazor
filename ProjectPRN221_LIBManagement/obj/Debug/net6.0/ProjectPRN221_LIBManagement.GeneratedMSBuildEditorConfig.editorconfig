@@ -58,8 +58,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cRWRpdENhdGVnb3J5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/workspace/ki 7/PRN221/Project v2/PRN221_ProjectRazor/ProjectPRN221_LIBManagement/Pages/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hhbmdlUGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/workspace/ki 7/PRN221/Project v2/PRN221_ProjectRazor/ProjectPRN221_LIBManagement/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/workspace/ki 7/PRN221/Project v2/PRN221_ProjectRazor/ProjectPRN221_LIBManagement/Pages/Home.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/workspace/ki 7/PRN221/Project v2/PRN221_ProjectRazor/ProjectPRN221_LIBManagement/Pages/Index.cshtml]
@@ -78,8 +86,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5cTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/workspace/ki 7/PRN221/Project v2/PRN221_ProjectRazor/ProjectPRN221_LIBManagement/Pages/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nb3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/workspace/ki 7/PRN221/Project v2/PRN221_ProjectRazor/ProjectPRN221_LIBManagement/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/workspace/ki 7/PRN221/Project v2/PRN221_ProjectRazor/ProjectPRN221_LIBManagement/Pages/profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNccHJvZmlsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/workspace/ki 7/PRN221/Project v2/PRN221_ProjectRazor/ProjectPRN221_LIBManagement/Pages/Shared/_ValidationScriptsPartial.cshtml]
