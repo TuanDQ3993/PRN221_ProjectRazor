@@ -54,10 +54,6 @@ namespace ProjectPRN221_LIBManagement.Pages.Admin
                 booksQuery = booksQuery.Where(b => b.PublisherId == publisherId);
                 pId = publisherId;
             }
-
-
-
-
             Books = await booksQuery.ToListAsync();
            
 

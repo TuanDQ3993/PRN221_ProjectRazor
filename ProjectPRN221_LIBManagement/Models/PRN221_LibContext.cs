@@ -41,7 +41,7 @@ namespace ProjectPRN221_LIBManagement.Models
         {
             modelBuilder.Entity<Author>(entity =>
             {
-                entity.HasIndex(e => e.AuthorName, "UQ__Authors__4A1A120B26C0E60B")
+                entity.HasIndex(e => e.AuthorName, "UQ__Authors__4A1A120B3514A74B")
                     .IsUnique();
 
                 entity.Property(e => e.AuthorId).HasColumnName("AuthorID");
@@ -51,7 +51,7 @@ namespace ProjectPRN221_LIBManagement.Models
 
             modelBuilder.Entity<Book>(entity =>
             {
-                entity.HasIndex(e => e.Isbn, "UQ__Books__447D36EACFAC2354")
+                entity.HasIndex(e => e.Isbn, "UQ__Books__447D36EA298614AB")
                     .IsUnique();
 
                 entity.Property(e => e.BookId).HasColumnName("BookID");
@@ -90,7 +90,7 @@ namespace ProjectPRN221_LIBManagement.Models
 
             modelBuilder.Entity<Category>(entity =>
             {
-                entity.HasIndex(e => e.CategoryName, "UQ__Categori__8517B2E0815A4771")
+                entity.HasIndex(e => e.CategoryName, "UQ__Categori__8517B2E0ADD70B90")
                     .IsUnique();
 
                 entity.Property(e => e.CategoryId).HasColumnName("CategoryID");
@@ -100,7 +100,7 @@ namespace ProjectPRN221_LIBManagement.Models
 
             modelBuilder.Entity<Publisher>(entity =>
             {
-                entity.HasIndex(e => e.PublisherName, "UQ__Publishe__5F0E2249E8BE70C9")
+                entity.HasIndex(e => e.PublisherName, "UQ__Publishe__5F0E224919C450C1")
                     .IsUnique();
 
                 entity.Property(e => e.PublisherId).HasColumnName("PublisherID");
@@ -154,7 +154,7 @@ namespace ProjectPRN221_LIBManagement.Models
 
             modelBuilder.Entity<User>(entity =>
             {
-                entity.HasIndex(e => e.Email, "UQ__Users__A9D105348FEF1D9D")
+                entity.HasIndex(e => e.Email, "UQ__Users__A9D10534B9B3E429")
                     .IsUnique();
 
                 entity.Property(e => e.UserId).HasColumnName("UserID");
