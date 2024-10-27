@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj": {}
+    "D:\\FPT - Ki 7\\PRN221\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj": {}
   },
   "projects": {
-    "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj": {
+    "D:\\FPT - Ki 7\\PRN221\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj",
+        "projectUniqueName": "D:\\FPT - Ki 7\\PRN221\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj",
         "projectName": "ProjectPRN221_LIBManagement",
-        "projectPath": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj",
+        "projectPath": "D:\\FPT - Ki 7\\PRN221\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\obj\\",
+        "outputPath": "D:\\FPT - Ki 7\\PRN221\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

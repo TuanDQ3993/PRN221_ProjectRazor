@@ -1,18 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\",
+  "WorkspaceRootPath": "D:\\FPT - Ki 7\\PRN221\\PRN221_ProjectRazor\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|d:\\hoc tap\\prn221\\project\\prn221_projectrazor\\projectprn221_libmanagement\\pages\\admin\\booksmanage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|solutionrelative:projectprn221_libmanagement\\pages\\admin\\booksmanage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|d:\\hoc tap\\prn221\\project\\prn221_projectrazor\\projectprn221_libmanagement\\pages\\index1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|solutionrelative:projectprn221_libmanagement\\pages\\index1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|d:\\hoc tap\\prn221\\project\\prn221_projectrazor\\projectprn221_libmanagement\\pages\\admin\\booksmanage.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|solutionrelative:projectprn221_libmanagement\\pages\\admin\\booksmanage.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|d:\\fpt - ki 7\\prn221\\prn221_projectrazor\\projectprn221_libmanagement\\pages\\admin\\adduser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|solutionrelative:projectprn221_libmanagement\\pages\\admin\\adduser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +14,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 11,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index1.cshtml",
-              "DocumentMoniker": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Pages\\Index1.cshtml",
-              "RelativeDocumentMoniker": "ProjectPRN221_LIBManagement\\Pages\\Index1.cshtml",
-              "ToolTip": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Pages\\Index1.cshtml",
-              "RelativeToolTip": "ProjectPRN221_LIBManagement\\Pages\\Index1.cshtml",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAAAH0AAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-25T07:39:17.56Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BooksManage.cshtml.cs",
-              "DocumentMoniker": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Pages\\Admin\\BooksManage.cshtml.cs",
-              "RelativeDocumentMoniker": "ProjectPRN221_LIBManagement\\Pages\\Admin\\BooksManage.cshtml.cs",
-              "ToolTip": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Pages\\Admin\\BooksManage.cshtml.cs",
-              "RelativeToolTip": "ProjectPRN221_LIBManagement\\Pages\\Admin\\BooksManage.cshtml.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAIA1wCkAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T07:01:59.479Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:14:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:10:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:7:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:5:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:8:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:10:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:12:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:13:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "BooksManage.cshtml",
-              "DocumentMoniker": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Pages\\Admin\\BooksManage.cshtml",
-              "RelativeDocumentMoniker": "ProjectPRN221_LIBManagement\\Pages\\Admin\\BooksManage.cshtml",
-              "ToolTip": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Pages\\Admin\\BooksManage.cshtml",
-              "RelativeToolTip": "ProjectPRN221_LIBManagement\\Pages\\Admin\\BooksManage.cshtml",
-              "ViewState": "AgIAALUAAAAAAAAAAAAAAIYAAABRAAAAAAAAAA==",
+              "Title": "AddUser.cshtml",
+              "DocumentMoniker": "D:\\FPT - Ki 7\\PRN221\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Pages\\Admin\\AddUser.cshtml",
+              "RelativeDocumentMoniker": "ProjectPRN221_LIBManagement\\Pages\\Admin\\AddUser.cshtml",
+              "ToolTip": "D:\\FPT - Ki 7\\PRN221\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Pages\\Admin\\AddUser.cshtml",
+              "RelativeToolTip": "ProjectPRN221_LIBManagement\\Pages\\Admin\\AddUser.cshtml",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-25T07:01:57.668Z",
+              "WhenOpened": "2024-10-25T13:23:07.215Z",
               "EditorCaption": ""
             }
           ]
