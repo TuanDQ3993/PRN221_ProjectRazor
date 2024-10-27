@@ -3,75 +3,20 @@
   "WorkspaceRootPath": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|d:\\hoc tap\\prn221\\project\\prn221_projectrazor\\projectprn221_libmanagement\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|solutionrelative:projectprn221_libmanagement\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|d:\\hoc tap\\prn221\\project\\prn221_projectrazor\\projectprn221_libmanagement\\pages\\home\\shopdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|solutionrelative:projectprn221_libmanagement\\pages\\home\\shopdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|d:\\hoc tap\\prn221\\project\\prn221_projectrazor\\projectprn221_libmanagement\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|solutionrelative:projectprn221_libmanagement\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|d:\\hoc tap\\prn221\\project\\prn221_projectrazor\\projectprn221_libmanagement\\pages\\home\\shop.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|solutionrelative:projectprn221_libmanagement\\pages\\home\\shop.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|d:\\hoc tap\\prn221\\project\\prn221_projectrazor\\projectprn221_libmanagement\\models\\prn221_libcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|solutionrelative:projectprn221_libmanagement\\models\\prn221_libcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|d:\\hoc tap\\prn221\\project\\prn221_projectrazor\\projectprn221_libmanagement\\pages\\home\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|solutionrelative:projectprn221_libmanagement\\pages\\home\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|d:\\hoc tap\\prn221\\project\\prn221_projectrazor\\projectprn221_libmanagement\\pages\\admin\\editbook.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|solutionrelative:projectprn221_libmanagement\\pages\\admin\\editbook.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|d:\\hoc tap\\prn221\\project\\prn221_projectrazor\\projectprn221_libmanagement\\pages\\admin\\editbook.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|solutionrelative:projectprn221_libmanagement\\pages\\admin\\editbook.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|d:\\hoc tap\\prn221\\project\\prn221_projectrazor\\projectprn221_libmanagement\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|solutionrelative:projectprn221_libmanagement\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|d:\\hoc tap\\prn221\\project\\prn221_projectrazor\\projectprn221_libmanagement\\pages\\admin\\booksmanage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|solutionrelative:projectprn221_libmanagement\\pages\\admin\\booksmanage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|d:\\hoc tap\\prn221\\project\\prn221_projectrazor\\projectprn221_libmanagement\\models\\publisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|solutionrelative:projectprn221_libmanagement\\models\\publisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|d:\\hoc tap\\prn221\\project\\prn221_projectrazor\\projectprn221_libmanagement\\models\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|solutionrelative:projectprn221_libmanagement\\models\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|d:\\hoc tap\\prn221\\project\\prn221_projectrazor\\projectprn221_libmanagement\\models\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|solutionrelative:projectprn221_libmanagement\\models\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|d:\\hoc tap\\prn221\\project\\prn221_projectrazor\\projectprn221_libmanagement\\models\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|solutionrelative:projectprn221_libmanagement\\models\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|d:\\hoc tap\\prn221\\project\\prn221_projectrazor\\projectprn221_libmanagement\\pages\\admin\\booksmanage.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|solutionrelative:projectprn221_libmanagement\\pages\\admin\\booksmanage.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|d:\\hoc tap\\prn221\\project\\prn221_projectrazor\\projectprn221_libmanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|solutionrelative:projectprn221_libmanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|d:\\hoc tap\\prn221\\project\\prn221_projectrazor\\projectprn221_libmanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|solutionrelative:projectprn221_libmanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|d:\\hoc tap\\prn221\\project\\prn221_projectrazor\\projectprn221_libmanagement\\pages\\index1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|solutionrelative:projectprn221_libmanagement\\pages\\index1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|d:\\hoc tap\\prn221\\project\\prn221_projectrazor\\projectprn221_libmanagement\\pages\\index1.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|solutionrelative:projectprn221_libmanagement\\pages\\index1.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Downloads\\Bookly-1.0.0\\Bookly-1.0.0\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|d:\\hoc tap\\prn221\\project\\prn221_projectrazor\\projectprn221_libmanagement\\pages\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|solutionrelative:projectprn221_libmanagement\\pages\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|d:\\hoc tap\\prn221\\project\\prn221_projectrazor\\projectprn221_libmanagement\\pages\\shared\\_userlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|solutionrelative:projectprn221_libmanagement\\pages\\shared\\_userlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B96593D0-DCA9-432B-82A0-379F69C261D6}|ProjectPRN221_LIBManagement\\ProjectPRN221_LIBManagement.csproj|d:\\hoc tap\\prn221\\project\\prn221_projectrazor\\projectprn221_libmanagement\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -85,251 +30,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PRN221_LibContext.cs",
-              "DocumentMoniker": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Models\\PRN221_LibContext.cs",
-              "RelativeDocumentMoniker": "ProjectPRN221_LIBManagement\\Models\\PRN221_LibContext.cs",
-              "ToolTip": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Models\\PRN221_LibContext.cs",
-              "RelativeToolTip": "ProjectPRN221_LIBManagement\\Models\\PRN221_LibContext.cs",
-              "ViewState": "AgIAAKIAAAAAAAAAAAAawK0AAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T09:53:33.202Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EditBook.cshtml.cs",
-              "DocumentMoniker": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Pages\\Admin\\EditBook.cshtml.cs",
-              "RelativeDocumentMoniker": "ProjectPRN221_LIBManagement\\Pages\\Admin\\EditBook.cshtml.cs",
-              "ToolTip": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Pages\\Admin\\EditBook.cshtml.cs",
-              "RelativeToolTip": "ProjectPRN221_LIBManagement\\Pages\\Admin\\EditBook.cshtml.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwCwAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T09:09:14.006Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Status.cs",
-              "DocumentMoniker": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Models\\Status.cs",
-              "RelativeDocumentMoniker": "ProjectPRN221_LIBManagement\\Models\\Status.cs",
-              "ToolTip": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Models\\Status.cs",
-              "RelativeToolTip": "ProjectPRN221_LIBManagement\\Models\\Status.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T08:53:01.865Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Transaction.cs",
-              "DocumentMoniker": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Models\\Transaction.cs",
-              "RelativeDocumentMoniker": "ProjectPRN221_LIBManagement\\Models\\Transaction.cs",
-              "ToolTip": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Models\\Transaction.cs",
-              "RelativeToolTip": "ProjectPRN221_LIBManagement\\Models\\Transaction.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T08:53:01.178Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Book.cs",
-              "DocumentMoniker": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Models\\Book.cs",
-              "RelativeDocumentMoniker": "ProjectPRN221_LIBManagement\\Models\\Book.cs",
-              "ToolTip": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Models\\Book.cs",
-              "RelativeToolTip": "ProjectPRN221_LIBManagement\\Models\\Book.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T08:52:57.283Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Publisher.cs",
-              "DocumentMoniker": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Models\\Publisher.cs",
-              "RelativeDocumentMoniker": "ProjectPRN221_LIBManagement\\Models\\Publisher.cs",
-              "ToolTip": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Models\\Publisher.cs",
-              "RelativeToolTip": "ProjectPRN221_LIBManagement\\Models\\Publisher.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T08:52:53.316Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Models\\User.cs",
-              "RelativeDocumentMoniker": "ProjectPRN221_LIBManagement\\Models\\User.cs",
-              "ToolTip": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Models\\User.cs",
-              "RelativeToolTip": "ProjectPRN221_LIBManagement\\Models\\User.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAA4wBUAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T08:51:21.668Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Program.cs",
-              "RelativeDocumentMoniker": "ProjectPRN221_LIBManagement\\Program.cs",
-              "ToolTip": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Program.cs",
-              "RelativeToolTip": "ProjectPRN221_LIBManagement\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T08:47:53.707Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\appsettings.json",
-              "RelativeDocumentMoniker": "ProjectPRN221_LIBManagement\\appsettings.json",
-              "ToolTip": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\appsettings.json",
-              "RelativeToolTip": "ProjectPRN221_LIBManagement\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-25T08:47:52.868Z",
+              "Title": "ShopDetails.cshtml",
+              "DocumentMoniker": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Pages\\Home\\ShopDetails.cshtml",
+              "RelativeDocumentMoniker": "ProjectPRN221_LIBManagement\\Pages\\Home\\ShopDetails.cshtml",
+              "ToolTip": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Pages\\Home\\ShopDetails.cshtml",
+              "RelativeToolTip": "ProjectPRN221_LIBManagement\\Pages\\Home\\ShopDetails.cshtml",
+              "ViewState": "AgIAAMwBAAAAAAAAAAAgwNEBAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-27T09:17:58.744Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Role.cs",
-              "DocumentMoniker": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Models\\Role.cs",
-              "RelativeDocumentMoniker": "ProjectPRN221_LIBManagement\\Models\\Role.cs",
-              "ToolTip": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Models\\Role.cs",
-              "RelativeToolTip": "ProjectPRN221_LIBManagement\\Models\\Role.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAkwA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T08:41:00.417Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Author.cs",
-              "DocumentMoniker": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Models\\Author.cs",
-              "RelativeDocumentMoniker": "ProjectPRN221_LIBManagement\\Models\\Author.cs",
-              "ToolTip": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Models\\Author.cs",
-              "RelativeToolTip": "ProjectPRN221_LIBManagement\\Models\\Author.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T08:40:56.643Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Index1.cshtml.cs",
-              "DocumentMoniker": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Pages\\Index1.cshtml.cs",
-              "RelativeDocumentMoniker": "ProjectPRN221_LIBManagement\\Pages\\Index1.cshtml.cs",
-              "ToolTip": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Pages\\Index1.cshtml.cs",
-              "RelativeToolTip": "ProjectPRN221_LIBManagement\\Pages\\Index1.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T08:27:36.047Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "BooksManage.cshtml",
-              "DocumentMoniker": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Pages\\Admin\\BooksManage.cshtml",
-              "RelativeDocumentMoniker": "ProjectPRN221_LIBManagement\\Pages\\Admin\\BooksManage.cshtml",
-              "ToolTip": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Pages\\Admin\\BooksManage.cshtml",
-              "RelativeToolTip": "ProjectPRN221_LIBManagement\\Pages\\Admin\\BooksManage.cshtml",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAAAJAAAAA7AAAAAAAAAA==",
+              "Title": "Shop.cshtml",
+              "DocumentMoniker": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Pages\\Home\\Shop.cshtml",
+              "RelativeDocumentMoniker": "ProjectPRN221_LIBManagement\\Pages\\Home\\Shop.cshtml",
+              "ToolTip": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Pages\\Home\\Shop.cshtml",
+              "RelativeToolTip": "ProjectPRN221_LIBManagement\\Pages\\Home\\Shop.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-25T07:01:57.668Z",
+              "WhenOpened": "2024-10-27T09:04:39.25Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Home.cshtml",
+              "DocumentMoniker": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Pages\\Home\\Home.cshtml",
+              "RelativeDocumentMoniker": "ProjectPRN221_LIBManagement\\Pages\\Home\\Home.cshtml",
+              "ToolTip": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Pages\\Home\\Home.cshtml",
+              "RelativeToolTip": "ProjectPRN221_LIBManagement\\Pages\\Home\\Home.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-27T08:49:00.951Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "EditBook.cshtml",
-              "DocumentMoniker": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Pages\\Admin\\EditBook.cshtml",
-              "RelativeDocumentMoniker": "ProjectPRN221_LIBManagement\\Pages\\Admin\\EditBook.cshtml",
-              "ToolTip": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Pages\\Admin\\EditBook.cshtml",
-              "RelativeToolTip": "ProjectPRN221_LIBManagement\\Pages\\Admin\\EditBook.cshtml",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAAAGUAAAAAAAAAAAAAAA==",
+              "Title": "_UserLayout.cshtml",
+              "DocumentMoniker": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Pages\\Shared\\_UserLayout.cshtml",
+              "RelativeDocumentMoniker": "ProjectPRN221_LIBManagement\\Pages\\Shared\\_UserLayout.cshtml",
+              "ToolTip": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Pages\\Shared\\_UserLayout.cshtml",
+              "RelativeToolTip": "ProjectPRN221_LIBManagement\\Pages\\Shared\\_UserLayout.cshtml",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAQwHkAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-25T07:51:23.559Z",
+              "WhenOpened": "2024-10-27T08:21:13.279Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "style.css",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\Bookly-1.0.0\\Bookly-1.0.0\\style.css",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\Bookly-1.0.0\\Bookly-1.0.0\\style.css",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-10-25T08:03:24.953Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Error.cshtml",
-              "DocumentMoniker": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Pages\\Error.cshtml",
-              "RelativeDocumentMoniker": "ProjectPRN221_LIBManagement\\Pages\\Error.cshtml",
-              "ToolTip": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Pages\\Error.cshtml",
-              "RelativeToolTip": "ProjectPRN221_LIBManagement\\Pages\\Error.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-25T08:00:01.931Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 4,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Pages\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "ProjectPRN221_LIBManagement\\Pages\\Shared\\_Layout.cshtml",
               "ToolTip": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Pages\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "ProjectPRN221_LIBManagement\\Pages\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAG8AAAAAAAAAAAAAAI4AAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAAAIkAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-25T07:45:27.542Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Index1.cshtml",
-              "DocumentMoniker": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Pages\\Index1.cshtml",
-              "RelativeDocumentMoniker": "ProjectPRN221_LIBManagement\\Pages\\Index1.cshtml",
-              "ToolTip": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Pages\\Index1.cshtml",
-              "RelativeToolTip": "ProjectPRN221_LIBManagement\\Pages\\Index1.cshtml",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAAAH0AAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-25T07:39:17.56Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "BooksManage.cshtml.cs",
-              "DocumentMoniker": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Pages\\Admin\\BooksManage.cshtml.cs",
-              "RelativeDocumentMoniker": "ProjectPRN221_LIBManagement\\Pages\\Admin\\BooksManage.cshtml.cs",
-              "ToolTip": "D:\\hoc tap\\PRN221\\Project\\PRN221_ProjectRazor\\ProjectPRN221_LIBManagement\\Pages\\Admin\\BooksManage.cshtml.cs",
-              "RelativeToolTip": "ProjectPRN221_LIBManagement\\Pages\\Admin\\BooksManage.cshtml.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAwwA8AAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T07:01:59.479Z",
               "EditorCaption": ""
             }
           ]
