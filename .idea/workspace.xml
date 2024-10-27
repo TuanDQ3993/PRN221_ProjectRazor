@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a2eaa9aa-100b-4f28-a735-893ec11e7d7c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/Pages/Home/Home.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/Pages/Home/Home.cshtml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/Pages/Home/Shop.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/Pages/Home/Shop.cshtml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/Pages/Home/ShopDetails.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/Pages/Home/ShopDetails.cshtml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/Pages/Shared/_UserLayout.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/ScaffoldingReadMe.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/bundleconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/img/avatar.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/img/baner-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/img/banner-fruits.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/img/best-product-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/img/best-product-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/img/best-product-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/img/best-product-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/img/best-product-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/img/best-product-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/img/cart-page-header-img.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/img/featur-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/img/featur-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/img/featur-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/img/fruite-item-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/img/fruite-item-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/img/fruite-item-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/img/fruite-item-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/img/fruite-item-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/img/fruite-item-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/img/hero-img-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/img/hero-img-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/img/hero-img.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/img/payment.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/img/single-item.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/img/testimonial-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/img/vegetable-item-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/img/vegetable-item-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/img/vegetable-item-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/img/vegetable-item-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/img/vegetable-item-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/img/vegetable-item-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/lib/easing/easing.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/lib/easing/easing.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/lib/lightbox/css/lightbox.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/lib/lightbox/images/close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/lib/lightbox/images/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/lib/lightbox/images/next.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/lib/lightbox/images/prev.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/lib/lightbox/js/lightbox.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/lib/owlcarousel/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/lib/owlcarousel/assets/ajax-loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/lib/owlcarousel/assets/owl.carousel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/lib/owlcarousel/assets/owl.carousel.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/lib/owlcarousel/assets/owl.theme.default.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/lib/owlcarousel/assets/owl.theme.default.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/lib/owlcarousel/assets/owl.theme.green.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/lib/owlcarousel/assets/owl.theme.green.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/lib/owlcarousel/assets/owl.video.play.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/lib/owlcarousel/owl.carousel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/lib/owlcarousel/owl.carousel.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/lib/waypoints/links.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/lib/waypoints/waypoints.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/_accordion.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/_alert.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/_badge.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/_breadcrumb.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/_button-group.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/_buttons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/_card.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/_carousel.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/_close.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/_containers.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/_dropdown.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/_forms.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/_functions.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/_grid.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/_helpers.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/_images.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/_list-group.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/_modal.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/_nav.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/_navbar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/_offcanvas.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/_pagination.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/_popover.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/_progress.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/_reboot.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/_root.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/_spinners.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/_tables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/_toasts.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/_tooltip.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/_transitions.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/_type.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/_utilities.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/bootstrap-grid.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/bootstrap-reboot.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/bootstrap-utilities.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/bootstrap.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/forms/_floating-labels.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/forms/_form-check.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/forms/_form-control.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/forms/_form-range.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/forms/_form-select.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/forms/_form-text.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/forms/_input-group.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/forms/_labels.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/forms/_validation.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/helpers/_clearfix.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/helpers/_colored-links.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/helpers/_position.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/helpers/_ratio.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/helpers/_stretched-link.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/helpers/_text-truncation.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/helpers/_visually-hidden.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/mixins/_alert.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/mixins/_border-radius.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/mixins/_box-shadow.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/mixins/_breakpoints.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/mixins/_buttons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/mixins/_caret.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/mixins/_clearfix.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/mixins/_color-scheme.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/mixins/_container.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/mixins/_deprecate.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/mixins/_forms.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/mixins/_gradients.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/mixins/_grid.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/mixins/_image.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/mixins/_list-group.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/mixins/_lists.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/mixins/_pagination.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/mixins/_reset-text.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/mixins/_resize.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/mixins/_table-variants.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/mixins/_text-truncate.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/mixins/_transition.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/mixins/_utilities.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/mixins/_visually-hidden.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/utilities/_api.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/wwwroot/user/scss/bootstrap/scss/vendor/_rfs.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/READ-ME.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/cart.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/chackout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/contact.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/img/avatar.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/img/baner-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/img/banner-fruits.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/img/best-product-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/img/best-product-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/img/best-product-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/img/best-product-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/img/best-product-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/img/best-product-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/img/cart-page-header-img.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/img/featur-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/img/featur-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/img/featur-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/img/fruite-item-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/img/fruite-item-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/img/fruite-item-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/img/fruite-item-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/img/fruite-item-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/img/fruite-item-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/img/hero-img-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/img/hero-img-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/img/hero-img.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/img/payment.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/img/single-item.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/img/testimonial-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/img/vegetable-item-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/img/vegetable-item-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/img/vegetable-item-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/img/vegetable-item-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/img/vegetable-item-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/img/vegetable-item-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/lib/easing/easing.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/lib/easing/easing.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/lib/lightbox/css/lightbox.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/lib/lightbox/images/close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/lib/lightbox/images/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/lib/lightbox/images/next.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/lib/lightbox/images/prev.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/lib/lightbox/js/lightbox.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/lib/owlcarousel/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/lib/owlcarousel/assets/ajax-loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/lib/owlcarousel/assets/owl.carousel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/lib/owlcarousel/assets/owl.carousel.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/lib/owlcarousel/assets/owl.theme.default.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/lib/owlcarousel/assets/owl.theme.default.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/lib/owlcarousel/assets/owl.theme.green.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/lib/owlcarousel/assets/owl.theme.green.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/lib/owlcarousel/assets/owl.video.play.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/lib/owlcarousel/owl.carousel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/lib/owlcarousel/owl.carousel.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/lib/waypoints/links.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/lib/waypoints/waypoints.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/_accordion.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/_alert.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/_badge.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/_breadcrumb.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/_button-group.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/_buttons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/_card.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/_carousel.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/_close.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/_containers.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/_dropdown.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/_forms.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/_functions.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/_grid.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/_helpers.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/_images.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/_list-group.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/_modal.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/_nav.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/_navbar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/_offcanvas.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/_pagination.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/_popover.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/_progress.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/_reboot.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/_root.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/_spinners.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/_tables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/_toasts.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/_tooltip.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/_transitions.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/_type.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/_utilities.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/bootstrap-grid.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/bootstrap-reboot.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/bootstrap-utilities.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/bootstrap.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/forms/_floating-labels.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/forms/_form-check.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/forms/_form-control.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/forms/_form-range.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/forms/_form-select.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/forms/_form-text.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/forms/_input-group.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/forms/_labels.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/forms/_validation.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/helpers/_clearfix.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/helpers/_colored-links.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/helpers/_position.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/helpers/_ratio.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/helpers/_stretched-link.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/helpers/_text-truncation.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/helpers/_visually-hidden.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/mixins/_alert.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/mixins/_border-radius.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/mixins/_box-shadow.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/mixins/_breakpoints.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/mixins/_buttons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/mixins/_caret.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/mixins/_clearfix.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/mixins/_color-scheme.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/mixins/_container.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/mixins/_deprecate.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/mixins/_forms.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/mixins/_gradients.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/mixins/_grid.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/mixins/_image.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/mixins/_list-group.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/mixins/_lists.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/mixins/_pagination.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/mixins/_reset-text.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/mixins/_resize.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/mixins/_table-variants.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/mixins/_text-truncate.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/mixins/_transition.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/mixins/_utilities.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/mixins/_visually-hidden.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/utilities/_api.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/scss/bootstrap/scss/vendor/_rfs.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/shop-detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/shop.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/testimonial.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitables-1.0.0/fruitables-1.0.0/vegetable-website-template.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/ProjectPRN221_LIBManagement/config/applicationhost.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/ProjectPRN221_LIBManagement/v17/DocumentLayout.backup.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/ProjectPRN221_LIBManagement/v17/DocumentLayout.backup.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/.vs/ProjectPRN221_LIBManagement/FileContentIndex/53f5bfd6-0e85-47c7-b6a9-3bb6ea6d8f74.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/.vs/ProjectPRN221_LIBManagement/FileContentIndex/a99e33ab-996f-49e5-96a3-a18cd74cd576.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/.vs/ProjectPRN221_LIBManagement/v17/.wsuo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/.vs/VSWorkspaceState.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/.vs/slnx.sqlite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/Models/PRN221_LibContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/Models/PRN221_LibContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/Pages/Admin/BooksManage.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/Pages/Admin/BooksManage.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/Pages/Index1.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/Pages/Index1.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/ProjectPRN221_LIBManagement.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/ProjectPRN221_LIBManagement.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/ProjectPRN221_LIBManagement.csproj.user" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectPRN221_LIBManagement/ProjectPRN221_LIBManagement.csproj.user" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2o13QWb1c2JL0xWduIlsoG49Ils" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Merging dev__NguyenHaoQuang",
+    "kotlin-language-version-configured": "true",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142" />
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a2eaa9aa-100b-4f28-a735-893ec11e7d7c" name="Changes" comment="" />
+      <created>1730023239376</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1730023239376</updated>
+      <workItem from="1730023240793" duration="4000" />
+    </task>
+    <servers />
+  </component>
+</project>
