@@ -18,6 +18,7 @@ namespace ProjectPRN221_LIBManagement.Models
         public string? PhoneNumber { get; set; }
         public string? Address { get; set; }
         public DateTime? DateOfBirth { get; set; }
+        public bool? IsBan { get; set; }
 
         public virtual Role RoleNavigation { get; set; } = null!;
         public virtual ICollection<Transaction> Transactions { get; set; }

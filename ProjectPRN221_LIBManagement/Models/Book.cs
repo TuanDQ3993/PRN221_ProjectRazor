@@ -18,6 +18,7 @@ namespace ProjectPRN221_LIBManagement.Models
         public string? Isbn { get; set; }
         public int? CategoryId { get; set; }
         public int? Quantity { get; set; }
+        public string? Image { get; set; }
 
         public virtual Author? Author { get; set; }
         public virtual Category? Category { get; set; }
