@@ -91,62 +91,109 @@
     }
 </style>
 
-    <div class="form-container">
-        <h1>Thêm Sách Mới</h1>
-        <form id="addBookForm" method="post">
-            <div class="form-group">
-                <label for="title">Title<span class="required">*</span></label>
-                <input type="text" id="title" name="title" required>
-            </div>
+<div class="form-container">
+    <h1>Thêm Sách Mới</h1>
 
-            <div class="form-group">
-                <label for="authorId">Authors</label>
-                <select id="authorId" name="authorId">
-                @foreach(var emp in Model.authors)
+    @if (!ModelState.IsValid)
+    {
+        <div class="validation-summary-errors">
+            <ul>
+                @foreach (var modelState in ModelState.Values)
                 {
-                    <option value="@emp.AuthorId">@emp.AuthorName</option>
-                }
-                                
-                </select>
-            </div>
-
-            <div class="form-group">
-            <label for="publisherId">Publishers</label>
-                <select id="publisherId" name="publisherId">
-                    @foreach(var emp in Model.publishers){
-                    <option value="@emp.PublisherId">@emp.PublisherName</option>
+                    foreach (var error in modelState.Errors)
+                    {
+                        <li>@error.ErrorMessage</li>
                     }
-                </select>
-            </div>
-
-            <div class="form-group">
-            <label for="yearPublished">Year Published</label>
-                <input type="number" id="yearPublished" name="yearPublished"
-                   min="1800" max="2024" required>
-            </div>
-
-            <div class="form-group">
-                <label for="isbn">ISBN</label>
-                <input type="text" id="isbn" name="isbn"
-                   pattern="[0-9-]{10,17}" required>
-            </div>
-
-            <div class="form-group">
-            <label for="categoryId">Category</label>
-            <select id="categoryId" name="categoryId" required>
-                @foreach(var emp in Model.categories){
-                    <option value="@emp.CategoryId">@emp.CategoryName</option>
                 }
-                </select>
-            </div>
+            </ul>
+        </div>
+    }
 
-            <div class="form-group">
-                <label for="quantity">Quantity</label>
-                <input type="number" id="quantity" name="quantity"
-                   min="0" required>
-            </div>
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["SuccessMessage"]
+        </div>
+    }
 
-            <button type="submit">Add Book</button>
-        </form>
-    </div>
+    <form method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="title">Title<span class="required">*</span></label>
+            <input type="text" id="title" name="Title" value="@Model.Title" required>
+            <span class="field-validation-error" asp-validation-for="Title"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="authorId">Authors</label>
+            <select id="authorId" name="AuthorId">
+                @if (Model.authors != null)
+                {
+                    @foreach (var author in Model.authors)
+                    {
+                        <option value="@author.AuthorId">@author.AuthorName</option>
+                    }
+                }
+            </select>
+            <span class="field-validation-error" asp-validation-for="AuthorId"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="publisherId">Publishers</label>
+            <select id="publisherId" name="PublisherId">
+                @if (Model.publishers != null)
+                {
+                    @foreach (var publisher in Model.publishers)
+                    {
+                        <option value="@publisher.PublisherId">@publisher.PublisherName</option>
+                    }
+                }
+            </select>
+            <span class="field-validation-error" asp-validation-for="PublisherId"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="yearPublished">Year Published</label>
+            <input type="number" id="yearPublished" name="YearPublished"
+                   min="1800" max="2024" value="@Model.YearPublished" required>
+            <span class="field-validation-error" asp-validation-for="YearPublished"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="isbn">ISBN</label>
+            <input type="text" id="isbn" name="Isbn"
+                   pattern="[0-9-]{10,17}" value="@Model.Isbn" required>
+            <span class="field-validation-error" asp-validation-for="Isbn"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="categoryId">Category</label>
+            <select id="categoryId" name="CategoryId" required>
+                @if (Model.categories != null)
+                {
+                    @foreach (var category in Model.categories)
+                    {
+                        <option value="@category.CategoryId">@category.CategoryName</option>
+                    }
+                }
+            </select>
+            <span class="field-validation-error" asp-validation-for="CategoryId"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" name="Quantity"
+                   min="0" value="@Model.Quantity" required>
+            <span class="field-validation-error" asp-validation-for="Quantity"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="image">Image</label>
+            <input type="file" id="image" name="ImageFile" accept=".jpg,.jpeg,.png,.gif">
+            <span class="field-validation-error" asp-validation-for="ImageFile"></span>
+            <small class="form-text text-muted">Allowed formats: .jpg, .jpeg, .png, .gif</small>
+        </div>
+
+        <button type="submit">Add Book</button>
+    </form>
+
  

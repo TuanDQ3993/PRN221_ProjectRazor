@@ -1,3 +1,4 @@
+﻿using Microsoft.AspNetCore.Http.Features;
 using Microsoft.EntityFrameworkCore;
 using ProjectPRN221_LIBManagement.Models;
 
@@ -9,7 +10,15 @@ builder.Services.AddDbContext<PRN221_LibContext>(option =>
 {
     option.UseSqlServer(builder.Configuration.GetConnectionString("value"));
 });
+builder.Services.AddRazorPages();
+builder.Services.Configure<FormOptions>(options =>
+{
+    options.MultipartBodyLengthLimit = 209715200; // Hạn chế kích thước file tối đa nếu cần (đây là khoảng 200MB)
+});
+
 var app = builder.Build();
+
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
