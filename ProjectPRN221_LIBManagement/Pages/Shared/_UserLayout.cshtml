@@ -1,4 +1,15 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Mvc.Rendering
+@{
+    string GetActiveClass(string page)
+    {
+        var currentPage = ViewContext.RouteData.Values["Page"] as string;
+        return currentPage?.Contains(page) == true ? "active" : "";
+    }
+}
+
+
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -59,9 +70,11 @@
                 </button>
                 <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                     <div class="navbar-nav mx-auto">
-                        <a href="Home" class="nav-item nav-link active">Home</a>
-                        <a href="shop" class="nav-item nav-link">Shop</a>
+                        <a class="nav-item nav-link @GetActiveClass("/Home/Home")" asp-page="/Home/Home">Home</a>
+                        <a class="nav-item nav-link @GetActiveClass("/Home/Shop")" asp-page="/Home/Shop">Shop</a>
+                     
                     </div>
+                </div>
                     <div class="d-flex m-3 me-0">
 
                         <a href="#" class="position-relative me-4 my-auto">

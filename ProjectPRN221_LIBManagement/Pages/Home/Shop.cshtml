@@ -207,16 +207,16 @@
                                     <a href="#" class="product-link">
                                         <div class="rounded position-relative fruite-item">
                                             <div class="fruite-img">
-                                               @*  https://img.lovepik.com/png/20231005/cute-elements-of-book-cartoons-bookmark-blue_83349_wh860.png *@
+                                     
                                                 <img src="@book.Image" class="img-fluid w-100 rounded-top" alt="">
                                             </div>
                                             @* <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div> *@
                                             <div class="p-4 border border-secondary border-top-0 rounded-bottom">
                                                 <h4>@book.Title</h4>
-                                                <p>Quantity: @book.Quantity</p>
-                                                <p>Author: @book.Author.AuthorName</p>
+                                                <p class="fa fa-tag me-2"> @book.Category.CategoryName</p>
+                                                <p class="fa fa-user me-2">@book.Author.AuthorName</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
-                                                    <p class="text-dark fs-5 fw-bold mb-0">Publisher: @book.Publisher.PublisherName</p>
+                                                    <p class="fa fa-building me-2 fs-5 mb-0">Publisher: @book.Publisher.PublisherName</p>
                                                     <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                                                 </div>
                                             </div>

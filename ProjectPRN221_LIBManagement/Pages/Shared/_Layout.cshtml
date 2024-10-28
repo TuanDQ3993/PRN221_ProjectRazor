@@ -1,4 +1,16 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Mvc.Rendering
+@{
+    string GetActiveClass(string page)
+    {
+        var currentPage = ViewContext.RouteData.Values["Page"] as string;
+        return currentPage?.Contains(page) == true ? "active" : "";
+    }
+}
+
+
+
+1
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <!-- Required meta tags -->
@@ -26,7 +38,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto navbar-right-top">                    
+                    <ul class="navbar-nav ml-auto navbar-right-top">
                         <li class="nav-item dropdown nav-user">
                             <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle"></a>
                             <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
@@ -47,7 +59,6 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-4 nav-left-sidebar sidebar-dark">
-
                 <div class="menu-list">
                     <nav class="navbar navbar-expand-lg navbar-light">
                         <a class="d-xl-none d-lg-none" href="#">Dashboard</a>
@@ -60,60 +71,61 @@
                                     Menu
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" asp-page="/Admin/BooksManage">
+                                    <a class="nav-link @GetActiveClass("/Admin/BooksManage")" asp-page="/Admin/BooksManage">
                                         <i class="fas fa-fw fa-chart-pie"></i>
                                         Book Manager
                                     </a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="">
+                                    <a class="nav-link @GetActiveClass("/Admin/UserManage")" asp-page="/Admin/UserManage">
                                         <i class="fas fa-fw fa-chart-pie"></i>
                                         User Manager
                                     </a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="">
+                                    <a class="nav-link @GetActiveClass("/Admin/TransactionManage")" asp-page="/Admin/TransactionManage">
                                         <i class="fas fa-fw fa-chart-pie"></i>
                                         Transactions Manager
                                     </a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="">
+                                    <a class="nav-link @GetActiveClass("/Admin/PublisherManage")" asp-page="/Admin/PublisherManage">
                                         <i class="fas fa-fw fa-chart-pie"></i>
                                         Publisher Manager
                                     </a>
                                 </li>
 
-                                <li class="nav-item" >
-                                    <a class="nav-link" asp-page="/Admin/AuthorsManage">
+                                <li class="nav-item">
+                                    <a class="nav-link @GetActiveClass("/Admin/AuthorsManage")" asp-page="/Admin/AuthorsManage">
                                         <i class="fas fa-fw fa-chart-pie"></i>
                                         Authors Manager
                                     </a>
                                 </li>
+
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/Admin/CategorysManage">
+                                    <a class="nav-link @GetActiveClass("/Admin/CategorysManage")" asp-page="/Admin/CategorysManage">
                                         <i class="fas fa-fw fa-chart-pie"></i>
                                         Categories Manager
                                     </a>
                                 </li>
-
-
+                            </ul>
                         </div>
-                        </li>
-                        </ul>
+                    </nav>
                 </div>
-                </nav>
-
             </div>
 
-            <main role="main" class="pb-3 col-md-12">
-                @RenderBody()
-            </main>
-        </div>
+            <div class="dashboard-wrapper" style="width: 100%;">
+                <div class="container-fluid  dashboard-content">
+                    <div class="row">
+                        @RenderBody()
+                    </div>
 
+                </div>
+            </div>
+        </div>
     </div>
 
     <footer class="border-top footer text-muted">
