@@ -7,8 +7,13 @@ namespace ProjectPRN221_LIBManagement.Models
 {
     public partial class PRN221_LibContext : DbContext
     {
+        public static PRN221_LibContext Ins = new PRN221_LibContext();
         public PRN221_LibContext()
         {
+            if (Ins == null)
+            {
+                Ins = this;
+            }
         }
 
         public PRN221_LibContext(DbContextOptions<PRN221_LibContext> options)
@@ -27,18 +32,16 @@ namespace ProjectPRN221_LIBManagement.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            if (!optionsBuilder.IsConfigured)
-            {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=localhost;Initial Catalog=PRN221_Lib; Trusted_Connection=SSPI;Encrypt=false;TrustServerCertificate=true");
-            }
+            var config = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();
+
+            if (!optionsBuilder.IsConfigured) { optionsBuilder.UseSqlServer(config.GetConnectionString("value")); }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Author>(entity =>
             {
-                entity.HasIndex(e => e.AuthorName, "UQ__Authors__4A1A120B1374336F")
+                entity.HasIndex(e => e.AuthorName, "UQ__Authors__4A1A120B3514A74B")
                     .IsUnique();
 
                 entity.Property(e => e.AuthorId).HasColumnName("AuthorID");
@@ -48,7 +51,7 @@ namespace ProjectPRN221_LIBManagement.Models
 
             modelBuilder.Entity<Book>(entity =>
             {
-                entity.HasIndex(e => e.Isbn, "UQ__Books__447D36EA4F4705BC")
+                entity.HasIndex(e => e.Isbn, "UQ__Books__447D36EA298614AB")
                     .IsUnique();
 
                 entity.Property(e => e.BookId).HasColumnName("BookID");
@@ -56,6 +59,8 @@ namespace ProjectPRN221_LIBManagement.Models
                 entity.Property(e => e.AuthorId).HasColumnName("AuthorID");
 
                 entity.Property(e => e.CategoryId).HasColumnName("CategoryID");
+
+                entity.Property(e => e.Image).IsUnicode(false);
 
                 entity.Property(e => e.Isbn)
                     .HasMaxLength(50)
@@ -85,7 +90,7 @@ namespace ProjectPRN221_LIBManagement.Models
 
             modelBuilder.Entity<Category>(entity =>
             {
-                entity.HasIndex(e => e.CategoryName, "UQ__Categori__8517B2E0FFD31983")
+                entity.HasIndex(e => e.CategoryName, "UQ__Categori__8517B2E0ADD70B90")
                     .IsUnique();
 
                 entity.Property(e => e.CategoryId).HasColumnName("CategoryID");
@@ -95,7 +100,7 @@ namespace ProjectPRN221_LIBManagement.Models
 
             modelBuilder.Entity<Publisher>(entity =>
             {
-                entity.HasIndex(e => e.PublisherName, "UQ__Publishe__5F0E2249309CF40E")
+                entity.HasIndex(e => e.PublisherName, "UQ__Publishe__5F0E224919C450C1")
                     .IsUnique();
 
                 entity.Property(e => e.PublisherId).HasColumnName("PublisherID");
@@ -149,7 +154,7 @@ namespace ProjectPRN221_LIBManagement.Models
 
             modelBuilder.Entity<User>(entity =>
             {
-                entity.HasIndex(e => e.Email, "UQ__Users__A9D1053481C991D9")
+                entity.HasIndex(e => e.Email, "UQ__Users__A9D10534B9B3E429")
                     .IsUnique();
 
                 entity.Property(e => e.UserId).HasColumnName("UserID");

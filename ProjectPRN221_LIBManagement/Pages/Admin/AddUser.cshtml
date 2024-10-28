@@ -1,0 +1,145 @@
+﻿@page
+@model ProjectPRN221_LIBManagement.Pages.Admin.AddUserModel
+@{
+    Layout = null;
+}
+@using ProjectPRN221_LIBManagement.Models;
+
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+        background-color: #f5f5f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+    }
+
+    .form-container {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 500px;
+    }
+
+    h1 {
+        color: #333;
+        margin-bottom: 25px;
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        color: #555;
+        font-weight: 500;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: border-color 0.3s;
+    }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+        font-size: 16px;
+        font-weight: 500;
+        transition: background-color 0.3s;
+    }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+    .required {
+        color: red;
+        margin-left: 3px;
+    }
+
+    input:invalid {
+        border-color: #ff6b6b;
+    }
+</style>
+
+<div class="form-container">
+    <h1>Thêm Người Dùng</h1>
+    <form id="addUserForm" method="post">
+        @* <div class="form-group">
+            <label for="userid">User ID<span class="required">*</span></label>
+            <input type="text" id="userid" name="userid" required>
+        </div> *@
+
+        <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+
+        <div class="form-group">
+            <label for="roleId">Role</label>
+            <select id="roleId" name="roleId">
+                @foreach(var temp in Model.roles)
+                {
+                    <option value="@temp.RoleId">@temp.RoleName</option>
+                }
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="phoneNumber">Phone Number</label>
+            <input type="text" id="phoneNumber" name="phoneNumber" required>
+        </div>
+
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" required>
+        </div>
+
+        <div class="form-group">
+            <label for="DateOfBirth">Date of Birth</label>
+            <input type="date" id="DateOfBirth" name="DateOfBirth" required>
+        </div>
+
+        <button type="submit">Add User</button>
+    </form>
+</div>
+

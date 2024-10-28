@@ -1,0 +1,304 @@
+﻿@page
+@model ProjectPRN221_LIBManagement.Pages.Home.HomeModel
+@{
+    Layout = "_UserLayout";
+}
+
+<style>
+    :root {
+        --primary-green: #2ecc71;
+        --secondary-green: #27ae60;
+        --light-green: #e8f5e9;
+        --hover-green: #29b765;
+        --dark-green: #145a32;
+    }
+
+    /* Books New Section */
+    .vesitable {
+        background-color: var(--light-green);
+    }
+
+    .display-4 {
+        color: var(--dark-green);
+        font-weight: bold;
+        position: relative;
+        display: inline-block;
+    }
+
+        .display-4::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary-green);
+        }
+
+    .vesitable-item {
+        transition: transform 0.3s ease;
+        margin: 15px;
+        background: white;
+    }
+
+        .vesitable-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(46, 204, 113, 0.2) !important;
+        }
+
+    .bg-primary {
+        background-color: var(--primary-green) !important;
+    }
+
+    .text-primary {
+        color: var(--secondary-green) !important;
+    }
+
+    .border-primary {
+        border-color: var(--primary-green) !important;
+    }
+
+    .btn-outline-primary {
+        color: var(--secondary-green);
+        border-color: var(--secondary-green);
+        transition: all 0.3s ease;
+    }
+
+        .btn-outline-primary:hover {
+            background-color: var(--secondary-green);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+    /* Books HOT Section */
+    .book-card {
+        border-radius: 15px;
+        transition: all 0.3s ease;
+        border: 1px solid #e0e0e0;
+    }
+
+        .book-card:hover {
+            box-shadow: 0 8px 16px rgba(46, 204, 113, 0.15);
+            transform: translateY(-5px);
+        }
+
+    .book-badge {
+        background-color: var(--primary-green) !important;
+        animation-name: badgePulse;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+
+    .book-image {
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+
+        .book-image:hover {
+            transform: scale(1.05);
+        }
+
+    .view-detail-btn {
+        background-color: var(--light-green);
+        color: var(--secondary-green);
+        border: 2px solid var(--primary-green);
+        transition: all 0.3s ease;
+    }
+
+        .view-detail-btn:hover {
+            background-color: var(--primary-green);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+    .book-info i {
+        color: var(--secondary-green);
+    }
+
+    .section-title {
+        color: var(--dark-green);
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background-color: var(--primary-green);
+        }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: var(--light-green);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: var(--primary-green);
+        border-radius: 4px;
+    }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--secondary-green);
+        }
+
+    /* Animation */
+    @@-webkit-keyframes badgePulse {
+        0% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.05);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    @@keyframes badgePulse {
+        0% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.05);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+</style>
+
+<!-- Books New Start -->
+<div class="container-fluid vesitable py-5">
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h1 class="display-4">Books NEW</h1>
+            <p class="text-muted">Discover Our Latest Additions</p>
+        </div>
+        <div class="owl-carousel vegetable-carousel justify-content-center">
+            @if (Model.BookNew != null && Model.BookNew.Any())
+            {
+                @foreach (var book in Model.BookNew)
+                {
+                    <div class="border border-primary rounded position-relative vesitable-item shadow-sm">
+                        <div class="vesitable-img position-relative overflow-hidden">
+                            <img src="@book.Image" class="img-fluid w-100 rounded-top"
+                                 style="height: 300px; object-fit: cover;">
+                            <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
+                                 style="top: 10px; right: 10px;">
+                                <i class="fas fa-bookmark me-1"></i>New Arrival
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-bottom bg-white">
+                            <h4 class="text-primary mb-3" style="overflow: hidden; text-overflow: ellipsis;
+                                                                display: -webkit-box; -webkit-line-clamp: 1;
+                                                                -webkit-box-orient: vertical; min-height: 24px;">
+                                @book.Title
+                            </h4>
+                            <div class="d-flex mb-2">
+                                <i class="fa fa-bookmark text-primary me-2 mt-1"></i>
+                                <span class="text-muted">@(book.Category?.CategoryName ?? "N/A")</span>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="fa fa-user text-primary me-2 mt-1"></i>
+                                <span class="text-muted">@(book.Author?.AuthorName ?? "N/A")</span>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="fa fa-building text-primary me-2 mt-1"></i>
+                                <span class="text-muted">@(book.Publisher?.PublisherName ?? "N/A")</span>
+                            </div>
+                            <a asp-page="/Home/ShopDetails" asp-route-id="@book.BookId" class="btn btn-outline-primary px-3 mt-3">
+                                <i class="fa fa-search me-2"></i>View Details
+                            </a>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <div class="text-center">
+                    <p class="text-muted">No new books available.</p>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+<!-- Books New End -->
+<!-- Books HOT Start -->
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="text-center mx-auto mb-5" style="max-width: 700px;">
+            <h1 class="display-4 fw-bold section-title">Books HOT</h1>
+            <p class="text-muted mt-3">These are the most popular books based on rental counts.</p>
+        </div>
+        <div class="row g-4">
+            @if (Model.BookHot != null && Model.BookHot.Any())
+            {
+                @foreach (var book in Model.BookHot)
+                {
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="p-4 bg-white position-relative book-card">
+                            <div class="position-absolute top-0 end-0 mt-3 me-3">
+                                <span class="badge book-badge px-3 py-2">
+                                    <i class="fa fa-fire me-1"></i>HOT
+                                </span>
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col-6" style="height:180px">
+                                    <img src="@(string.IsNullOrEmpty(book.Image) ? "img/best-product-1.jpg" : book.Image)"
+                                         class="img-fluid w-100 rounded book-image" alt="@book.Title" style="height:100%; object-fit: cover;">
+                                </div>
+                                <div class="col-6">
+                                    <h5 class="mb-3 fw-bold text-truncate">@book.Title</h5>
+                                    <div class="book-info">
+                                        <p class="small text-muted mb-2" style="overflow: hidden; text-overflow: ellipsis;
+                                                                display: -webkit-box; -webkit-line-clamp: 1;
+                                                                -webkit-box-orient: vertical;">
+                                            <i class="fa fa-user me-2"></i>
+                                            <span style="">@book.Author.AuthorName</span>
+                                        </p>
+                                        <p class="small text-muted mb-2">
+                                            <i class="fa fa-tag me-2"></i>
+                                            <span>@book.Category.CategoryName</span>
+                                        </p>
+                                        <p class="small text-muted mb-3" style="overflow: hidden; text-overflow: ellipsis;
+                                                                display: -webkit-box; -webkit-line-clamp: 1;
+                                                                -webkit-box-orient: vertical;">
+                                            <i class="fa fa-building me-2"></i>
+                                            <span>@book.Publisher.PublisherName</span>
+                                        </p>
+                                    </div>
+                                    <a asp-page="/Home/ShopDetails" asp-route-id="@book.BookId"
+                                       class="btn rounded-pill px-4 py-2 view-detail-btn w-100">
+                                        <i class="fa fa-eye me-2"></i>View detail
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <div class="col-12 text-center">
+                    <p class="text-muted">No popular books available.</p>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+<!-- Books HOT End -->
