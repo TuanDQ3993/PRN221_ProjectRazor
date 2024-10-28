@@ -47,6 +47,7 @@ namespace ProjectPRN221_LIBManagement.Pages.Admin
                 Address = Address,
                 PhoneNumber = phoneNumber,
                 DateOfBirth = DateOfBirth,
+                IsBan = false
             };
             _context.Users.Add(users);
             _context.SaveChanges();
