@@ -1,11 +1,16 @@
+
 ﻿using Microsoft.AspNetCore.Http.Features;
 using Microsoft.EntityFrameworkCore;
+
 using ProjectPRN221_LIBManagement.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
+
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddSession(); // Thêm session
 builder.Services.AddDbContext<PRN221_LibContext>(option =>
 {
     option.UseSqlServer(builder.Configuration.GetConnectionString("value"));
@@ -32,6 +37,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseSession(); // Kích hoạt session
 
 app.UseAuthorization();
 
