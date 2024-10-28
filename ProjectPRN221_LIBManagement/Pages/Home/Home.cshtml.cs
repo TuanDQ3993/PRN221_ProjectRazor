@@ -9,15 +9,16 @@ namespace ProjectPRN221_LIBManagement.Pages.Home
         private readonly PRN221_LibContext _context;
         public List<Book>? BookNew { get; set; }
         public List<Book>? BookHot { get; set; }
-
+        public int? UserId { get; set; }
         public HomeModel(PRN221_LibContext context)
         {
+            
             _context = context;
         }
 
         public void OnGet()
         {
-
+            UserId = HttpContext.Session.GetInt32("UserID");
             //booknew
             BookNew = _context.Books
                     .Include(b => b.Category)

@@ -27,9 +27,11 @@ namespace ProjectPRN221_LIBManagement.Pages.Home
         public string searched { get; set; }
 
         public string sortOrdered { get; set; }
+
+        public int? UserId { get; set; }
         public async Task OnGetAsync(int? cateId, int? pubId, int? auId, string search, string sortOrder)
         {
-
+            UserId = HttpContext.Session.GetInt32("UserID");
 
             IQueryable<Book> booksQuery = _context.Books.Include(x => x.Author)
                                                        .Include(x => x.Category)

@@ -1,7 +1,7 @@
 ﻿@page
 @model ProjectPRN221_LIBManagement.Pages.Home.HistoryBooksModel
 @{
-    Layout = null;
+    Layout = "_UserLayout";
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -19,20 +19,18 @@
     </style>
 </head>
 <body>
-
-    <!-- BREADCRUMB -->
     <div id="breadcrumb" class="section">
+        <!-- container -->
         <div class="container">
+            <!-- row -->
             <div class="row">
                 <div class="col-md-12">
-                    <h3 class="breadcrumb-header">My Order</h3>
-                    <ul class="breadcrumb-tree">
-                        <li ><a href="/home">Home</a></li>
-                        <li class="active">My Order</li>
-                    </ul>
+                    <h3 class="breadcrumb-header">History Transaction</h3>
+              
                 </div>
             </div>
         </div>
+        <!-- /container -->
     </div>
 
     <!-- SECTION -->
@@ -47,7 +45,6 @@
                         {
                             <option value="@s.StatusId" selected="@(s.StatusId == Model.Status)">@s.StatusName</option>
                         }
-
                     </select>
                     <button type="submit" style="padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer;">
                         Search
@@ -65,7 +62,9 @@
                                 </div>
                                 <div style="margin-top: 20px;">
                                     <div style="display: flex; border-bottom: 1px solid #eee; padding-bottom: 15px;">
-                                        <img src="image.jpg" alt="Product Image" style="width: 100px; height: 100px; margin-right: 20px;">
+                                    <a asp-page="/Home/ShopDetails" asp-route-id="@transaction.Book.BookId">
+                                        <img src="@transaction.Book.Image" alt="Product Image" style="width: 100px; height: 100px; margin-right: 20px;">
+                                    </a>
                                         <div>
                                             <p style="margin: 0; font-size: 16px;">Book Name:@transaction.Book.Title</p>
                                             <p style="margin: 5px 0;">Due Date: @transaction.DueDate.ToShortDateString()</p>
