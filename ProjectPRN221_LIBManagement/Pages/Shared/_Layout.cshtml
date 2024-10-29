@@ -60,7 +60,13 @@
                                     Menu
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" asp-page="/Admin/BooksManage">
+                                    <a class="nav-link @GetActiveClass("/Admin/Dashboard")" asp-page="/Admin/Dashboard">
+                                        <i class="fas fa-fw fa-chart-pie"></i>
+                                        Dashboard
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link @GetActiveClass("/Admin/BooksManage")" asp-page="/Admin/BooksManage">
                                         <i class="fas fa-fw fa-chart-pie"></i>
                                         Book Manager
                                     </a>
@@ -109,9 +115,13 @@
 
             </div>
 
-            <main role="main" class="pb-3 col-md-12">
-                @RenderBody()
-            </main>
+            <div class="dashboard-wrapper" style="width: 100%;">
+                <div class="container-fluid  dashboard-content">
+                    
+                        @RenderBody()
+                  
+                </div>
+            </div>
         </div>
 
     </div>
