@@ -21,6 +21,8 @@ namespace ProjectPRN221_LIBManagement.Pages.Admin
         [BindProperty]
         public int YearPublished { get; set; }
         [BindProperty]
+        public string Description { get; set; }
+        [BindProperty]
         public string Isbn { get; set; }
         [BindProperty]
         public int CategoryId { get; set; }
@@ -69,6 +71,7 @@ namespace ProjectPRN221_LIBManagement.Pages.Admin
             {
                 Title = Title.Trim(),
                 AuthorId = AuthorId,
+                Description = Description.Trim(),
                 PublisherId = PublisherId,
                 YearPublished = YearPublished,
                 Isbn = Isbn?.Trim(),

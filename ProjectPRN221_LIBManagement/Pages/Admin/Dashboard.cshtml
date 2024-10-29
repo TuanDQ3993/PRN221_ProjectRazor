@@ -167,36 +167,56 @@
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script>
-            var xValues = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-            var yValues = [123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123]; // Đảm bảo có 12 giá trị
-            var barColors = ["#9c9ab5", "#9c9ab5", "#9c9ab5", "#9c9ab5", "#9c9ab5", "#9c9ab5", "#9c9ab5", "#9c9ab5", "#9c9ab5", "#9c9ab5", "#9c9ab5", "#9c9ab5"];
+<script>
+    // Chuyển đổi số tháng thành tên tháng
+    function getMonthName(monthNumber) {
+        const months = ["January", "February", "March", "April", "May", "June", 
+                       "July", "August", "September", "October", "November", "December"];
+        return months[monthNumber - 1];
+    }
 
-            new Chart("myChart", {
-                type: "bar",
-                data: {
-                    labels: xValues,
-                    datasets: [{
-                        backgroundColor: barColors,
-                        data: yValues
-                    }]
-                },
-                options: {
-                    plugins: {
-                        legend: { display: false },
-                        title: {
-                            display: true,
-                            text: "Revenue"
-                        }
-                    },
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
-                    }
+    // Lấy dữ liệu từ Model
+    const transactions = @Html.Raw(Json.Serialize(Model.transactions));
+    
+    // Chuẩn bị dữ liệu cho biểu đồ
+    const labels = transactions.map(t => getMonthName(t.month));
+    const borrowData = transactions.map(t => t.borrowCount);
+    const returnData = transactions.map(t => t.returnCount);
+
+    new Chart("myChart", {
+        type: "bar",
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Borrow Count',
+                backgroundColor: "#9c9ab5",
+                data: borrowData
+            }, {
+                label: 'Return Count',
+                backgroundColor: "#6c6b7e",
+                data: returnData
+            }]
+        },
+        options: {
+            plugins: {
+                title: {
+                    display: true,
+                    text: "Book Transactions by Month"
                 }
-            });
-        </script>
+            },
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            },
+            responsive: true,
+            legend: {
+                display: true,
+                position: 'top'
+            }
+        }
+    });
+</script>
         <script>
             var xValues = ["abc", "abd", "adc"];
 
