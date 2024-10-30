@@ -226,15 +226,30 @@
                             }
                             <div class="col-12">
                                 <div class="pagination d-flex justify-content-center mt-5">
-                                    <a href="#" class="rounded">&laquo;</a>
-                                    <a href="#" class="active rounded">1</a>
-                                    <a href="#" class="rounded">2</a>
-                                    <a href="#" class="rounded">3</a>
-                                    <a href="#" class="rounded">4</a>
-                                    <a href="#" class="rounded">5</a>
-                                    <a href="#" class="rounded">6</a>
-                                    <a href="#" class="rounded">&raquo;</a>
-                                </div>
+                                    @if (Model.Books.HasPreviousPage)
+                                    {
+                                        <a asp-page="./Shop" asp-route-pageIndex="@(Model.Books.PageIndex - 1)">&laquo;</a>
+                                    }
+                              
+                                    @for (int i = 1; i <= Model.Books.TotalPages; i++)
+                                    {
+                                        if (i == Model.Books.PageIndex)
+                                        {
+                                             <a class="rounded active">@i</a>
+                                        }
+                                        else
+                                        {
+                                            <a class="rounded" asp-page="./Shop" asp-route-pageIndex="@i">@i</a>  <!-- Liên kết đến các trang khác -->
+                                        }
+                                    }
+                                    @if (Model.Books.HasNextPage)
+                                    {
+                                        <a class="rounded" asp-page="./Shop" asp-route-pageIndex="@(Model.Books.PageIndex + 1)">&raquo</a>
+                                    }
+                                  
+                                </div> 
+    
+                            </div>
                             </div>
                         </div>
                     </div>
