@@ -1,0 +1,250 @@
+﻿@page
+@model ProjectPRN221_LIBManagement.Pages.Admin.TransactionsManageModel
+@{
+}
+<style>
+    .error-message {
+        text-align: center; /* c?n gi?a n?i dung */
+        font-weight: bold; /* làm n?i b?t */
+
+        font-size: larger;
+    }
+
+    .filter {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .filter1 {
+        display: flex;
+        align-items: center;
+    }
+
+    .texta {
+        margin-right: 10px;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    select {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    /* Tùy ch?nh các select n?m trong .filter */
+    .filter select {
+        margin-right: 10px;
+    }
+
+        /* Tùy ch?nh màu n?n khi hover trên select */
+        .filter select:hover {
+            background-color: #f5f5f5;
+        }
+
+    select:hover {
+        background-color: #f5f5f5;
+    }
+
+    input[type="submit"] {
+        padding: 10px 15px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+        /* Hi?u ?ng hover cho nút Filter */
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+    .search-p {
+        justify-content: right;
+    }
+</style>
+
+<div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top: 93px;">
+        <div class="filter1">
+
+            <form method="get">
+                <div class="filter">
+
+                   
+
+                    <div class="form-group mx-sm-3 mb-2">
+                        <label for="startDate" class="mr-2">Start Date:</label>
+                        <input type="date" name="StartDate" id="startDate" class="form-control" value="@Model.StartDate?.ToString("yyyy-MM-dd")">
+                    </div>
+
+                    <div class="form-group mx-sm-3 mb-2">
+                        <label for="endDate" class="mr-2">End Date:</label>
+                        <input type="date" name="EndDate" id="endDate" class="form-control" value="@Model.EndDate?.ToString("yyyy-MM-dd")">
+                    </div>
+
+                    <div class="form-group mx-sm-3 mb-2">
+                        <select name="Status" style=" margin-top: 24px;">
+                            <option value="0" Selected="@(Model.Status==0)">All Statuses</option>
+                            @foreach (var s in Model.status)
+                            {
+                                <option value="@s.StatusId" selected="@(s.StatusId == Model.Status)">@s.StatusName</option>
+                            }
+
+                        </select>
+                    </div>
+                    <input style="margin-top: 12px;" type="submit" value="Filter" />
+                </div>
+            </form>
+            <div style="margin-left: 15px;">
+                <a asp-page="AddBook"><button type="button" class="btn btn-danger">Create Transaction</button> </a>
+            </div>
+            <div class="input-group rounded search-p">
+                <form asp-page="TransactionsManage" method="get" style="display: flex; align-items: center;">
+                    <select name="searchType">
+                        <option value="0" selected="@(Model.SearchType==0)">Borrower</option>
+                        <option value="1" selected="@(Model.SearchType==1)">Book</option>
+                    </select>
+                    <input type="search" name="Search" class="form-control rounded" value="@Model.Search" placeholder="Search" aria-label="Search" aria-describedby="search-addon" style="max-width: 95%" />
+                </form>
+                <span class="input-group-text border-0" id="search-addon">
+                    <i class="fas fa-search"></i>
+                </span>
+            </div>
+        </div>
+        <div class="card">
+            <h5 class="card-header">List Transaction</h5>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table" id="userTable">
+                        <thead class="bg-light">
+                            <tr class="border-0">
+                                <th class="border-0" onclick="sortTable(0)">TransactionID</th>
+                                <th class="border-0" onclick="sortTable(1)">Borrower</th>
+                                <th class="border-0" onclick="sortTable(3)">BookName</th>
+                                <th class="border-0" onclick="sortTable(4)">Borrow Date</th>
+                                <th class="border-0" onclick="sortTable(5)">Due Date</th>
+                                <th class="border-0" onclick="sortTable(6)">Return Date</th>
+                                <th class="border-0" onclick="sortTable(7)">Status</th>
+                                <th class="border-0">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var trans in Model.transactions)
+                            {
+                                <tr>
+                                    <td>@trans.TransactionId</td>
+                                    <td>@trans.User.Email (@trans.User.FullName)</td>
+                                    <td>@trans.Book.Title</td>
+                                    <td>@trans.BorrowDate.ToShortDateString()</td>
+                                    <td>@trans.DueDate.ToShortDateString()</td>
+                                    <td>@(trans.ReturnDate != null ? trans.ReturnDate.Value.ToString("dd/MM/yyyy") : "Chưa trả")</td>
+                                    <td>@trans.StatusNavigation.StatusName</td>
+                                    <td>
+                                        @if (trans.Status == 4)
+                                        {
+                                            <a href="/Admin/ChangeStatus?transId=@trans.TransactionId&value=5" class="btn btn-success">Chấp Nhận</a>
+                                            <a href="/Admin/ChangeStatus?transId=@trans.TransactionId&value=6" class="btn btn-danger">Hủy</a>
+                                        }
+                                        @if (trans.Status == 1 || trans.Status == 3)
+                                        {
+                                            <a href="/Admin/ChangeStatus?transId=@trans.TransactionId&value=2" class="btn btn-success">Đã trả</a>
+                                        }
+                                        @if (trans.Status == 5)
+                                        {
+                                            <a href="/Admin/ChangeStatus?transId=@trans.TransactionId&value=1" class="btn btn-success">Đã lấy</a>
+                                            <a href="/Admin/ChangeStatus?transId=@trans.TransactionId&value=6" class="btn btn-danger">Hủy</a>
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ============================================================== -->
+<!-- end wrapper  -->
+<!-- ============================================================== -->
+
+<script src="~/assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+<!-- bootstrap bundle js-->
+<script src="~/assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+<!-- slimscroll js-->
+<script src="~/assets/vendor/slimscroll/jquery.slimscroll.js"></script>
+<!-- chartjs js-->
+<script src="~/assets/vendor/charts/charts-bundle/Chart.bundle.js"></script>
+<script src="~/assets/vendor/charts/charts-bundle/chartjs.js"></script>
+
+<!-- main js-->
+<script src="~/assets/libs/js/main-js.js"></script>
+<!-- jvactormap js-->
+<script src="~/assets/vendor/jvectormap/jquery-jvectormap-2.0.2.min.js"></script>
+<script src="~/assets/vendor/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+<!-- sparkline js-->
+<script src="~/assets/vendor/charts/sparkline/jquery.sparkline.js"></script>
+<script src="~/assets/vendor/charts/sparkline/spark-js.js"></script>
+<!-- dashboard sales js-->
+<script src="~/assets/libs/js/dashboard-sales.js"></script>
+<script>
+    function sortTable(colIndex) {
+        var table = document.getElementById('userTable');
+        var rows = table.rows;
+        var switching = true;
+        var shouldSwitch = false;
+        var dir = 'asc';
+
+        while (switching) {
+            switching = false;
+            for (var i = 1; i < rows.length - 1; i++) {
+                shouldSwitch = false;
+                var x = rows[i].getElementsByTagName('td')[colIndex];
+                var y = rows[i + 1].getElementsByTagName('td')[colIndex];
+                if (colIndex === 0) { // If sorting by id column
+                    if (dir == 'asc') {
+                        if (parseInt(x.innerHTML) > parseInt(y.innerHTML)) {
+                            shouldSwitch = true;
+                            break;
+                        }
+                    } else if (dir == 'desc') {
+                        if (parseInt(x.innerHTML) < parseInt(y.innerHTML)) {
+                            shouldSwitch = true;
+                            break;
+                        }
+                    }
+                } else {
+                    if (dir == 'asc') {
+                        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                            shouldSwitch = true;
+                            break;
+                        }
+                    } else if (dir == 'desc') {
+                        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                            shouldSwitch = true;
+                            break;
+                        }
+                    }
+                }
+            }
+            if (shouldSwitch) {
+                rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                switching = true;
+            } else {
+                if (dir == 'asc') {
+                    dir = 'desc';
+                } else {
+                    dir = 'asc';
+                }
+            }
+        }
+    }
+
+
+
+
+</script>
