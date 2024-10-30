@@ -31,7 +31,8 @@ namespace ProjectPRN221_LIBManagement.Pages
 					}
 					else
 					{
-						return RedirectToPage("/Home/home");
+
+						return RedirectToPage("home/home");
 					}
 				}
 			}

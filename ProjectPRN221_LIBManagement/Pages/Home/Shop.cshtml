@@ -5,20 +5,37 @@
     Layout = "_UserLayout";
 }
 
-
-
 <style>
+    :root {
+        --primary-green: #2ecc71;
+        --secondary-green: #27ae60;
+        --light-green: #e8f5e9;
+        --hover-green: #29b765;
+        --dark-green: #145a32;
+    }
 
     .fruite-item {
         height: 100%;
         display: flex;
         flex-direction: column;
         background-color: #fff;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     }
 
+        .fruite-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        }
+
     .fruite-categorie .active {
-        color: #your-primary-color;
+        color: var(--primary-green);
         font-weight: bold;
+    }
+
+    .fruite-categorie li:hover a {
+        color: var(--primary-green);
+        transition: all 0.3s ease;
     }
 
     .fruite-img {
@@ -34,7 +51,12 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: transform 0.3s ease;
         }
+
+    .fruite-item:hover .fruite-img img {
+        transform: scale(1.05);
+    }
 
     .p-4 {
         flex: 1;
@@ -51,6 +73,7 @@
             -webkit-box-orient: vertical;
             overflow: hidden;
             height: 2.8em;
+            color: #333;
         }
 
         .p-4 p {
@@ -58,6 +81,7 @@
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
+            color: #666;
         }
 
     .d-flex {
@@ -73,51 +97,102 @@
         max-width: 100%;
     }
 
-    .btn {
-        white-space: nowrap;
-        margin-left: auto;
+    .btn-view-detail {
+        background-color: transparent;
+        color: var(--primary-green);
+        border: 2px solid var(--primary-green);
+        padding: 8px 20px;
+        border-radius: 25px;
+        transition: all 0.3s ease;
+        font-weight: 500;
     }
 
+        .btn-view-detail:hover {
+            background-color: var(--primary-green);
+            color: white;
+        }
+
+    .search-input {
+        border: 2px solid var(--primary-green-light);
+        border-radius: 25px;
+        padding: 10px 20px;
+    }
+
+        .search-input:focus {
+            border-color: var(--primary-green);
+            box-shadow: 0 0 0 0.2rem rgba(46, 204, 113, 0.25);
+        }
+
+    .category-icon {
+        color: var(--primary-green);
+        margin-right: 8px;
+    }
+
+    .sort-select {
+        border: 2px solid var(--primary-green-light);
+        border-radius: 20px;
+        padding: 8px 15px;
+    }
+
+    .pagination a {
+        color: var(--primary-green);
+        padding: 8px 16px;
+        margin: 0 4px;
+        border: 1px solid var(--primary-green-light);
+        transition: all 0.3s ease;
+    }
+
+        .pagination a:hover {
+            background-color: var(--primary-green-light);
+            color: white;
+        }
+
+        .pagination a.active {
+            background-color: var(--primary-green);
+            color: white;
+            border-color: var(--primary-green);
+        }
+
+    .category-header {
+        color: var(--primary-green-dark);
+        font-weight: 600;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid var(--primary-green-light);
+    }
 </style>
-
-
-
-
 
 <div class="container-fluid fruite py-5">
     <ol class="breadcrumb justify-content-center mb-0">
         <li class="breadcrumb-item"><a asp-page="home">Home</a></li>
         <li class="breadcrumb-item"><a asp-page="shop">Shop</a></li>
-
     </ol>
     <div class="container py-5">
-        <h1 class="mb-4">Fresh fruits shop</h1>
+        <h1 class="mb-4 text-center" style="color: var(--primary-green-dark)">Book Collection</h1>
         <div class="row g-4">
             <div class="col-lg-12">
                 <div class="row g-4">
                     <div class="col-xl-3">
                         <form method="get" asp-page="shop">
                             <div class="input-group w-100 mx-auto d-flex">
-                                <input type="search" name="search" class="form-control p-3" placeholder="search" value="@Model.searched" aria-describedby="search-icon-1">
-                                <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+                                <input type="search" name="search" class="form-control search-input" placeholder="Search books..." value="@Model.searched">
+                                <span class="input-group-text search-input" style="background-color: var(--primary-green); color: white;">
+                                    <i class="fas fa-search"></i>
+                                </span>
                             </div>
                         </form>
-
                     </div>
                     <div class="col-6"></div>
                     <div class="col-xl-3">
                         <div class="bg-light ps-3 py-3 rounded d-flex justify-content-between mb-4">
-
                             <form id="sortForm" method="get">
-                                <label for="sortOrder">Default Sorting:</label>
-                                <select id="sortOrder" name="sortOrder" class="border-0 form-select-sm bg-light me-3" onchange="submitForm()">
+                                <label for="sortOrder">Sort by:</label>
+                                <select id="sortOrder" name="sortOrder" class="sort-select" onchange="submitForm()">
                                     <option value="Default" selected="@(Model.sortOrdered == "Default" ? "selected" : null)">Default</option>
-                                    <option value="Ascending" selected="@(Model.sortOrdered == "Ascending" ? "selected" : null)">Ascending</option>
-                                    <option value="Descending" selected="@(Model.sortOrdered == "Descending" ? "selected" : null)">Descending</option>
+                                    <option value="Ascending" selected="@(Model.sortOrdered == "Ascending" ? "selected" : null)">A to Z</option>
+                                    <option value="Descending" selected="@(Model.sortOrdered == "Descending" ? "selected" : null)">Z to A</option>
                                 </select>
                             </form>
-
-
                         </div>
                     </div>
                 </div>
@@ -126,7 +201,7 @@
                         <div class="row g-4">
                             <div class="col-lg-12">
                                 <div class="mb-3">
-                                    <h4>Categories</h4>
+                                    <h4 class="category-header"><i class="fas fa-bookmark category-icon"></i>Categories</h4>
                                     @foreach (var cate in Model.Categories)
                                     {
                                         <ul class="list-unstyled fruite-categorie">
@@ -135,21 +210,18 @@
                                                     <a asp-page="Shop"
                                                        asp-route-cateId="@cate.CategoryId"
                                                        class="@(Model.selectedCate == cate.CategoryId ? "active" : "")">
-                                                        <i class="fas fa-apple-alt me-2"></i>@cate.CategoryName
+                                                        <i class="fas fa-book-open category-icon"></i>@cate.CategoryName
                                                     </a>
                                                     <span></span>
                                                 </div>
                                             </li>
-
                                         </ul>
                                     }
-
-
                                 </div>
                             </div>
                             <div class="col-lg-12">
                                 <div class="mb-3">
-                                    <h4>Authors</h4>
+                                    <h4 class="category-header"><i class="fas fa-user category-icon"></i>Authors</h4>
                                     @foreach (var au in Model.Author)
                                     {
                                         <ul class="list-unstyled fruite-categorie">
@@ -158,22 +230,18 @@
                                                     <a asp-page="Shop"
                                                        asp-route-auId="@au.AuthorId"
                                                        class="@(Model.selectedAu == au.AuthorId ? "active" : "")">
-                                                        <i class="fas fa-apple-alt me-2"></i>@au.AuthorName
+                                                        <i class="fas fa-pen-fancy category-icon"></i>@au.AuthorName
                                                     </a>
                                                     <span></span>
                                                 </div>
                                             </li>
-
                                         </ul>
                                     }
-
-
                                 </div>
                             </div>
-
                             <div class="col-lg-12">
                                 <div class="mb-3">
-                                    <h4>Publicsher</h4>
+                                    <h4 class="category-header"><i class="fas fa-building category-icon"></i>Publishers</h4>
                                     @foreach (var pu in Model.Publisher)
                                     {
                                         <ul class="list-unstyled fruite-categorie">
@@ -182,46 +250,38 @@
                                                     <a asp-page="Shop"
                                                        asp-route-pubId="@pu.PublisherId"
                                                        class="@(Model.selectedPub == pu.PublisherId ? "active" : "")">
-                                                        <i class="fas fa-apple-alt me-2"></i>@pu.PublisherName
+                                                        <i class="fas fa-print category-icon"></i>@pu.PublisherName
                                                     </a>
                                                     <span></span>
                                                 </div>
                                             </li>
-
                                         </ul>
                                     }
                                 </div>
                             </div>
-
-                            <div class="col-lg-12">
-                            </div>
-                            <div class="col-lg-12">
-                            </div>
                         </div>
                     </div>
                     <div class="col-lg-9">
-                        <div class="row g-4 ">
+                        <div class="row g-4">
                             @foreach (var book in Model.Books)
                             {
                                 <div class="col-md-6 col-lg-6 col-xl-4">
-                                    <a href="#" class="product-link">
-                                        <div class="rounded position-relative fruite-item">
-                                            <div class="fruite-img">
-                                               @*  https://img.lovepik.com/png/20231005/cute-elements-of-book-cartoons-bookmark-blue_83349_wh860.png *@
-                                                <img src="@book.Image" class="img-fluid w-100 rounded-top" alt="">
-                                            </div>
-                                            @* <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div> *@
-                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                <h4>@book.Title</h4>
-                                                <p>Quantity: @book.Quantity</p>
-                                                <p>Author: @book.Author.AuthorName</p>
-                                                <div class="d-flex justify-content-between flex-lg-wrap">
-                                                    <p class="text-dark fs-5 fw-bold mb-0">Publisher: @book.Publisher.PublisherName</p>
-                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                                </div>
-                                            </div>
+                                    <div class="rounded position-relative fruite-item">
+                                        <div class="fruite-img">
+                                            <img src="@book.Image" class="img-fluid w-100 rounded-top" alt="@book.Title">
                                         </div>
-                                    </a>
+                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                            <h4>@book.Title</h4>
+                                            <p><i class="fas fa-bookmark category-icon"></i>@book.Category.CategoryName</p>
+                                            <p><i class="fas fa-user category-icon"></i>@book.Author.AuthorName</p>
+
+                                            <p><i class="fas fa-building category-icon"></i>@book.Publisher.PublisherName</p>
+                                            <a asp-page="/Home/ShopDetails" asp-route-id="@book.BookId" class="btn-view-detail">
+                                                <i class="fas fa-eye me-2"></i>View Detail
+                                            </a>
+
+                                        </div>
+                                    </div>
                                 </div>
                             }
                             <div class="col-12">
@@ -243,6 +303,7 @@
         </div>
     </div>
 </div>
+
 <script>
     function submitForm() {
         document.getElementById("sortForm").submit();
