@@ -16,5 +16,12 @@ namespace ProjectPRN221_LIBManagement.Models
         public virtual Book? Book { get; set; }
         public virtual Status? StatusNavigation { get; set; }
         public virtual User? User { get; set; }
+
+        // Thêm thuộc tính cho tháng
+        public int Month { get; set; }
+
+        // Thêm thuộc tính cho số lượng mượn và trả
+        public int BorrowCount { get; set; }
+        public int ReturnCount { get; set; }
     }
 }
