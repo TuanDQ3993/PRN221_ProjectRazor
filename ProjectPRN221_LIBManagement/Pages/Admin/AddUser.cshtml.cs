@@ -37,7 +37,14 @@ namespace ProjectPRN221_LIBManagement.Pages.Admin
             roles = _context.Roles.ToList();
         }
         public IActionResult OnPost()
-        {
+        {   
+            if(_context.Users.Any(u => u.Email == Email))
+            {
+                ModelState.AddModelError("Email", "Email exist already!");
+                roles = _context.Roles.ToList();
+                return Page();
+            }
+
             User users = new User()
             {
                 FullName = FullName,

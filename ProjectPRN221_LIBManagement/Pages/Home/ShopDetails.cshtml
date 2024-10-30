@@ -225,6 +225,13 @@
         <div class="row g-4 mb-5">
             <div class="col-lg-8 col-xl-9">
                 <div class="book-container">
+                    @if (TempData["SuccessMessage"] != null)
+                    {
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            @TempData["SuccessMessage"]
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    }
                     <div class="book-main-content">
                         <div class="book-image-container">
                             <img src="@Model.BookDetails.Image" class="book-image" alt="Book Cover">
@@ -238,10 +245,11 @@
                                     <p><i class="fas fa-building"></i> Publisher: @Model.BookDetails.Publisher.PublisherName</p>
                                 </div>
                             </div>
-                            <a href="#" class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                            <a asp-page="/home/RentBook" asp-route-id="@Model.BookDetails.BookId" class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart me-2"></i>Rent Book
                             </a>
                         </div>
+                        
                     </div>
 
                     <div class="description-container">
@@ -259,21 +267,21 @@
                 </div>
             </div>
             <div class="col-lg-4 col-xl-3">
-                <div class="search-container">
-                    <div class="input-group">
-                        <input type="search" class="form-control search-input" placeholder="Search books...">
-                        <button class="search-btn">
+                @* <form method="get" asp-page="shop">
+                    <div class="input-group w-100 mx-auto d-flex">
+                        <input type="search" name="search" class="form-control search-input" placeholder="Search books..." value="@Model.searched">
+                        <span class="input-group-text search-input" style="background-color: var(--primary-green); color: white;">
                             <i class="fas fa-search"></i>
-                        </button>
+                        </span>
                     </div>
-                </div>
+                </form> *@
                 <div class="categories-container">
                     <h4 class="categories-title">Categories</h4>
                     <div class="categories-list">
                         @foreach (var cate in Model.Categories)
                         {
                             <div class="category-item">
-                                <a href="#"><i class="fas fa-book me-2"></i>@cate.CategoryName</a>
+                                <a asp-page="/home/shop" asp-route-cateId="@cate.CategoryId"><i class="fas fa-book me-2"></i>@cate.CategoryName</a>
                                 <span>(@cate.Books.Count)</span>
                             </div>
                         }
