@@ -24,9 +24,9 @@
 <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
     <div class="card">
         <div class="card-body">
-            <h5 class="text-muted">Users</h5>
+            <h5 class="text-muted">USERS</h5>
             <div class="metric-value d-inline-block">
-                <h1 class="mb-1 text-primary" </h1>
+                    <h1 class="mb-1 text-primary">@Model.TotalUsers </h1>
             </div>
             <div class="metric-label d-inline-block float-right text-success">
                 <i class="fa fa-fw fa-caret-up"></i><span></span>
@@ -40,9 +40,9 @@
 <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
     <div class="card">
         <div class="card-body">
-            <h5 class="text-muted">Books</h5>
+            <h5 class="text-muted">BOOKS</h5>
             <div class="metric-value d-inline-block">
-                <h1 class="mb-1 text-primary" </h1>
+                    <h1 class="mb-1 text-primary">@Model.TotalBooks </h1>
             </div>
             <div class="metric-label d-inline-block float-right text-success">
                 <i class="fa fa-fw fa-caret-up"></i><span></span>
@@ -56,9 +56,9 @@
 <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
     <div class="card">
         <div class="card-body">
-                <h5 class="text-muted">Books on loan</h5>
+                <h5 class="text-muted">CATEGORY</h5>
             <div class="metric-value d-inline-block">
-                <h1 class="mb-1 text-primary" </h1>
+                <h1 class="mb-1 text-primary">@Model.TotalCategory </h1>
             </div>
             <div class="metric-label d-inline-block float-right text-success">
                 <i class="fa fa-fw fa-caret-up"></i><span></span>
@@ -71,9 +71,9 @@
 <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
     <div class="card">
         <div class="card-body">
-                <h5 class="text-muted">Overdue books</h5>
+                <h5 class="text-muted">TRANSACTION</h5>
             <div class="metric-value d-inline-block">
-                <h1 class="mb-1 text-primary" </h1>
+                <h1 class="mb-1 text-primary"> @Model.TotalTransaction </h1>
             </div>
             <div class="metric-label d-inline-block float-right text-success">
                 <i class="fa fa-fw fa-caret-up"></i><span></span>
@@ -96,39 +96,17 @@
             <div class="card-body">
                 <canvas id="myChart" width="400" height="150"></canvas>
             </div>
-            <div class="card-body border-top">
-                <div class="row">
-                    <div class="offset-xl-1 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 p-3">
-                        <h4> Today's Earning: <a class="original-price">${erning}đ</a></h4>
-
-                        </p>
-                    </div>
-                    <div class="offset-xl-1 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12 p-3">
-                        <h2 class="font-weight-normal mb-3"><span class="original-price"></span>                                                    </h2>
-                        <div class="mb-0 mt-3 legend-item">
-
-                            <span class="legend-text"> Highest Month</span>
-                        </div>
-                    </div>
-                    <div class="offset-xl-1 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12 p-3">
-                        <h2 class="font-weight-normal mb-3">
-
-                            <span class="original-price"></span>
-                        </h2>
-                        <div class="text-muted mb-0 mt-3 legend-item"><span class="legend-text">Lowest Month</span></div>
-                    </div>
-                </div>
-            </div>
+      
         </div>
     </div>
 
     <div class="col-xl-4 col-lg-12 col-md-4 col-sm-12 col-12">
         <div class="card">
-            <h5 class="card-header">Total Sale</h5>
+            <h5 class="card-header">Total</h5>
             <div class="card-body">
                 <canvas id="myPieChart" width="220" height="155"></canvas>
                 <div class="chart-widget-list" style="text-align: center;">
-                    <h5 style="display: block;">Brand Total Amount</h5>
+                    <h5 style="display: block;"> Total Amount</h5>
                 </div>
             </div>
         </div>
@@ -149,18 +127,30 @@
                     <table class="table">
                         <thead class="bg-light">
                             <tr class="border-0">
-                                <th class="border-0">#</th>
-                                <th class="border-0">Image</th>
-                                <th class="border-0">Product Name</th>
-                                <th class="border-0">Product Id</th>
-                                <th class="border-0">Price</th>
-                                <th class="border-0">Quantity Sold</th>
-                                <th class="border-0">Price Sold</th>
-
-
+                                <th class="border-0" onclick="sortTable(0)">BookID</th>
+                                <th class="border-0" onclick="sortTable(1)">Title</th>
+                                <th class="border-0" onclick="sortTable(2)">Author</th>
+                                <th class="border-0" onclick="sortTable(3)">Publisher</th>
+                                <th class="border-0" onclick="sortTable(4)">YearPublished</th>
+                                <th class="border-0" onclick="sortTable(5)">ISBN</th>
+                                <th class="border-0" onclick="sortTable(6)">Category</th>
+                                <th class="border-0" onclick="sortTable(7)">Quantity</th>
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach (var emp in Model.BookHot)
+                            {
+                                <tr>
+                                    <td>@emp.BookId</td>
+                                    <td>@emp.Title</td>
+                                    <td>@emp.Author?.AuthorName</td>
+                                    <td>@emp.Publisher?.PublisherName</td>
+                                    <td>@emp.YearPublished</td>
+                                    <td>@emp.Isbn</td>
+                                    <td>@emp.Category?.CategoryName</td>
+                                    <td>@emp.Quantity</td>
+                                </tr>
+                            }
                         </tbody>
                     </table>
                 </div>
@@ -218,10 +208,16 @@
     });
 </script>
         <script>
-            var xValues = ["abc", "abd", "adc"];
+            const transactionCount = @Html.Raw(Json.Serialize(Model.transactionsCount));
 
+            const statusMapping = {
+                1: "Borrowed",
+                2: "Returned"
+            };
 
-            var yValues = ["100","50","30"];
+            const label1 = transactionCount.map(x => statusMapping[x.status] || "Unknown"); // Dùng ánh xạ ở đây
+            const data1 = transactionCount.map(x => x.statusCount);
+
             var barColors = [
                 "#b91d47",
                 "#00aba9",
@@ -233,10 +229,10 @@
             new Chart("myPieChart", {
                 type: "pie",
                 data: {
-                    labels: xValues,
+                    labels: label1,
                     datasets: [{
                         backgroundColor: barColors,
-                        data: yValues
+                        data: data1
                     }]
                 },
                 options: {
