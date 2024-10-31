@@ -99,8 +99,11 @@
                 </div>
             </form>
             <div style="margin-left: 15px;">
-                <a asp-page="AddBook"><button type="button" class="btn btn-danger">Create Transaction</button> </a>
+                <a asp-page="AddTransaction"><button type="button" class="btn btn-danger">Create Transaction</button> </a>
             </div>
+            <form method="post">
+                <button type="submit" class="btn btn-primary">Export to Excel</button>
+            </form>
             <div class="input-group rounded search-p">
                 <form asp-page="TransactionsManage" method="get" style="display: flex; align-items: center;">
                     <select name="searchType">
