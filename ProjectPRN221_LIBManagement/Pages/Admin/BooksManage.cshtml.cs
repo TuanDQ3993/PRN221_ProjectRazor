@@ -13,7 +13,7 @@ namespace ProjectPRN221_LIBManagement.Pages.Admin
         {
             _context = context;
         }
-        public IList<Book> Books { get; set; }
+        public PaginatedList<Book> Books { get; set; }
         public IList<Author> authors = new List<Author>();
         public IList<Publisher> publishers = new List<Publisher>();
         public IList<Category> categories = new List<Category>();
@@ -24,9 +24,9 @@ namespace ProjectPRN221_LIBManagement.Pages.Admin
         public int? cid { get; set; }
         
         public string search {  get; set; }
-        public async Task OnGetAsync(string searchString, int? publisherId, int? authorId, int? categoryId)
+        public async Task OnGetAsync(string searchString, int? publisherId, int? authorId, int? categoryId, int? pageIndex)
         {
-
+            int pageSize = 10;
             IQueryable<Book> booksQuery = _context.Books.Include(x => x.Author)
                                                         .Include(x => x.Category)
                                                         .Include(x => x.Publisher);
@@ -54,7 +54,7 @@ namespace ProjectPRN221_LIBManagement.Pages.Admin
                 booksQuery = booksQuery.Where(b => b.PublisherId == publisherId);
                 pId = publisherId;
             }
-            Books = await booksQuery.ToListAsync();
+            Books = await PaginatedList<Book>.CreateAsync(booksQuery, pageIndex ?? 1, pageSize);
            
 
         }
