@@ -82,7 +82,7 @@ namespace ProjectPRN221_LIBManagement.Pages.Admin
 
             _context.Books.Add(book);
             await _context.SaveChangesAsync();
-            TempData["SuccessMessage"] = "Book added successfully!";
+            TempData["Message"] = "Book added successfully!";
 
             return RedirectToPage("BooksManage");
         }
