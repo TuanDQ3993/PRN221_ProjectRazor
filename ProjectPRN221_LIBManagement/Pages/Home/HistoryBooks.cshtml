@@ -68,7 +68,18 @@
                                         <div>
                                             <p style="margin: 0; font-size: 16px;">Book Name:@transaction.Book.Title</p>
                                             <p style="margin: 5px 0;">Due Date: @transaction.DueDate.ToShortDateString()</p>
-                                        <p style="color: red ">Return Date:@(transaction.ReturnDate!=null ? transaction.ReturnDate.ToString() : "Chưa trả") </p>
+                                        @{
+                                            if (transaction.Status == 3 )
+                                            {
+                                                var overdueDays = (DateTime.Now - transaction.DueDate).Days;
+                                                <p style="color: red ">Trễ hạn @overdueDays ngày</p>
+                                            }
+                                            else
+                                            {
+                                                <p style="color: red ">@(transaction.ReturnDate != null ? transaction.ReturnDate?.ToString("dd/MM/yyyy") : "Chưa trả")</p>
+                                            }
+                                        }
+                                        
                                         </div>
 
                                     </div>
