@@ -104,13 +104,14 @@
 
 <div class="row">
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top: 93px;">
-        <div class="filter1">
         @if (TempData["Message"] != null)
         {
             <div class="alert alert-success">
                 @TempData["Message"]
             </div>
         }
+        <div class="filter1">
+     
             <form asp-page="BooksManage" method="get">
                 <div class="filter">
                     <a class="texta" style=" color: #454444f7;">Filter:</a>
