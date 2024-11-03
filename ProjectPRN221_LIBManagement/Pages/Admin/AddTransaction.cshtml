@@ -1,0 +1,177 @@
+﻿@page
+@model ProjectPRN221_LIBManagement.Pages.Admin.AddTransactionModel
+@{
+    Layout = null;
+}
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+        background-color: #f5f5f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+    }
+
+    .form-container {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 500px;
+    }
+
+    h1 {
+        color: #333;
+        margin-bottom: 25px;
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        color: #555;
+        font-weight: 500;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: border-color 0.3s;
+    }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+        font-size: 16px;
+        font-weight: 500;
+        transition: background-color 0.3s;
+    }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+    .required {
+        color: red;
+        margin-left: 3px;
+    }
+
+    input:invalid {
+        border-color: #ff6b6b;
+    }
+</style>
+
+<div class="form-container">
+    <h1>Ceate Transaction</h1>
+   
+
+    <form method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="Email">Email Borrower<span class="required">*</span></label>
+            <input type="text" id="Email" name="Email" value="" required>
+            <span asp-validation-for="Email" style="color:red;" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="isbn">ISBN<span class="required">*</span></label>
+            <input type="text" id="isbn" name="isbn" value="" required>
+            <span asp-validation-for="ISBN" style="color:red;" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label class="form-label">
+                <i class="fas fa-calendar-plus me-2 text-success"></i>Borrow Date
+            </label>
+            <div class="date-picker-wrapper">
+                <input type="date"  class="form-control" id="borrowDate" required />
+            </div>
+            <small class="text-muted">
+                <i class="fas fa-info-circle me-1"></i>Select a date up to 7 days ahead
+            </small>
+            <span  class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">
+                <i class="fas fa-calendar-check me-2 text-success"></i>Return Date
+            </label>
+            <div class="date-picker-wrapper">
+                <input type="date"  class="form-control" id="returnDate" required />
+            </div>
+            <small class="text-muted">
+                <i class="fas fa-info-circle me-1"></i>Within 30 days from borrow date
+            </small>
+            <span  class="text-danger"></span>
+        </div>
+
+
+        <button type="submit">Create Transactions</button>
+    </form>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const borrowDateInput = document.getElementById('borrowDate');
+            const returnDateInput = document.getElementById('returnDate');
+
+            const today = new Date();
+            const maxBorrowDate = new Date();
+            maxBorrowDate.setDate(today.getDate() + 7);
+
+            const formatDate = (date) => date.toISOString().split('T')[0];
+
+            borrowDateInput.min = formatDate(today);
+            borrowDateInput.max = formatDate(maxBorrowDate);
+            borrowDateInput.value = formatDate(today);
+
+            // thay doi return date theo borrow date
+            borrowDateInput.addEventListener('change', function () {
+                const selectedBorrowDate = new Date(this.value);
+                const minReturnDate = new Date(selectedBorrowDate);
+                minReturnDate.setDate(selectedBorrowDate.getDate() + 1);
+
+                const maxReturnDate = new Date(selectedBorrowDate);
+                maxReturnDate.setDate(selectedBorrowDate.getDate() + 30);
+
+                returnDateInput.min = formatDate(minReturnDate);
+                returnDateInput.max = formatDate(maxReturnDate);
+
+                // Set default cho return date la 14 ngay tu borrow date
+                const currentReturnDate = new Date(returnDateInput.value);
+                if (currentReturnDate < minReturnDate || currentReturnDate > maxReturnDate) {
+                    const defaultReturnDate = new Date(selectedBorrowDate);
+                    defaultReturnDate.setDate(selectedBorrowDate.getDate() + 14);
+                    returnDateInput.value = formatDate(defaultReturnDate);
+                }
+            });
+
+
+            borrowDateInput.dispatchEvent(new Event('change'));
+        });
+    </script>

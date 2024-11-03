@@ -1,15 +1,4 @@
-﻿@using Microsoft.AspNetCore.Mvc.Rendering
-@{
-    string GetActiveClass(string page)
-    {
-        var currentPage = ViewContext.RouteData.Values["Page"] as string;
-        return currentPage?.Contains(page) == true ? "active" : "";
-    }
-}
-
-
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -52,7 +41,7 @@
         <div class="container topbar bg-primary d-none d-lg-block">
             <div class="d-flex justify-content-between">
                 <div class="top-info ps-2">
-                    <small class="me-3"><i class="fas fa-map-marker-alt me-2 text-secondary"></i> <a href="home" class="text-white">FPT University, Hòa Lạc</a></small>
+                    <small class="me-3"><i class="fas fa-map-marker-alt me-2 text-secondary"></i> <a  class="text-white">FPT University, Hòa Lạc</a></small>
                     <small class="me-3"><i class="fas fa-envelope me-2 text-secondary"></i><a href="#" class="text-white">JQK@gmail.com</a></small>
                 </div>
                 <div class="top-link pe-2">
@@ -64,26 +53,46 @@
         </div>
         <div class="container px-0">
             <nav class="navbar navbar-light bg-white navbar-expand-xl">
-                <a href="home" class="navbar-brand"><h1 class="text-primary display-6">JQK Book</h1></a>
+                <a asp-page="./home" class="navbar-brand"><h1 class="text-primary display-6">JQK Book</h1></a>
                 <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars text-primary"></span>
                 </button>
                 <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                     <div class="navbar-nav mx-auto">
-                        <a class="nav-item nav-link @GetActiveClass("/Home/Home")" asp-page="/Home/Home">Home</a>
-                        <a class="nav-item nav-link @GetActiveClass("/Home/Shop")" asp-page="/Home/Shop">Shop</a>
-                     
+                        <a asp-page="./home"  class="nav-item nav-link active">Home</a>
+                        <a asp-page="./shop" class="nav-item nav-link">Shop</a>
                     </div>
-                </div>
                     <div class="d-flex m-3 me-0">
 
-                        <a href="#" class="position-relative me-4 my-auto">
+                        @* <a href="#" class="position-relative me-4 my-auto">
                             <i class="fa fa-shopping-bag fa-2x"></i>
                             <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
-                        </a>
-                        <a href="#" class="my-auto">
-                            <i class="fas fa-user fa-2x"></i>
-                        </a>
+                        </a> *@
+                        <ul class="header-links1 pull-right " style="list-style-type: none; padding: 0; margin: 0;">
+                            @if (Model.UserId == null)
+                            {
+                                <li><a href="/login"><i class="fas fa-user fa-2x"></i>Login</a></li>
+                            }
+                            else
+                            {
+                                <li class="nav-item dropdown">
+                                    <a href="#" class="nav-link" onclick="toggleDropdown(event)">
+                                        <i class="fas fa-user fa-2x"></i>
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="/profile">Profile</a>
+                                        <a class="dropdown-item" href="/ChangePassword">Change Password</a>
+                                        <a class="dropdown-item" href="/Home/HistoryBooks">History Transaction</a>
+                                        
+                                        
+
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="/logout"><i class="fa fa-sign-out pull-right"></i>Log Out</a>
+                                    </div>
+                                </li>
+                            }
+                        </ul>
+                      
                     </div>
                 </div>
             </nav>
@@ -96,20 +105,24 @@
         <div class="container py-5">
             <div class="row g-5 align-items-center">
                 <div class="col-md-12 col-lg-7">
-                    <h4 class="mb-3 text-secondary">100% Organic Foods</h4>
-                    <h1 class="mb-5 display-3 text-primary">Organic Veggies & Fruits Foods</h1>
+                    <h4 class="mb-3 text-secondary">100% Sách Mới</h4>
+                    <h1 class="mb-5 display-3 text-primary">Mở Rộng Tầm Nhìn, Mở Rộng Cuộc Sống</h1>
            
                 </div>
                 <div class="col-md-12 col-lg-5">
                     <div id="carouselId" class="carousel slide position-relative" data-bs-ride="carousel">
                         <div class="carousel-inner" role="listbox">
                             <div class="carousel-item active rounded">
-                                <img src="img/hero-img-1.png" class="img-fluid w-100 h-100 bg-secondary rounded" alt="First slide">
-                                <a href="#" class="btn px-4 py-2 text-white rounded">Fruites</a>
+                                <img src="~/Image/banner-1.jpg" class="img-fluid w-100 h-100 bg-secondary rounded" alt="First slide">
+                                @* <a href="#" class="btn px-4 py-2 text-white rounded">Fruites</a> *@
                             </div>
                             <div class="carousel-item rounded">
-                                <img src="img/hero-img-2.jpg" class="img-fluid w-100 h-100 rounded" alt="Second slide">
-                                <a href="#" class="btn px-4 py-2 text-white rounded">Vesitables</a>
+                                <img src="~/Image/ms_banner_img1.png" class="img-fluid w-100 h-100 rounded" alt="Second slide">
+                                @* <a href="#" class="btn px-4 py-2 text-white rounded">Vesitables</a> *@
+                            </div>
+                            <div class="carousel-item rounded">
+                                <img src="~/Image/ms_banner_img5.png" class="img-fluid w-100 h-100 rounded" alt="Third slide">
+                                @* <a href="#" class="btn px-4 py-2 text-white rounded">Vesitables</a> *@
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
@@ -237,6 +250,28 @@
 
     <!-- Template Javascript -->
     <script src="~/user/js/main.js"></script>
-</body>
 
+</body>
+<script>
+    function toggleDropdown(event) {
+        event.preventDefault();
+        var dropdown = event.target.closest('.nav-item.dropdown');
+        dropdown.classList.toggle('show');
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function (event) {
+        if (!event.target.matches('.nav-link') && !event.target.closest('.nav-item.dropdown')) {
+            var dropdowns = document.getElementsByClassName('nav-item dropdown');
+            for (var i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+
+
+</script>
 </html>

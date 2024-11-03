@@ -1,0 +1,251 @@
+﻿@page
+@model ProjectPRN221_LIBManagement.Pages.Admin.DashboardModel
+@{
+    Layout = "_Layout";
+}
+<div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:35px;">
+        <div class="page-header">
+            <h3 class="mb-2">Admin Dashboard</h3>
+
+
+            <div class="page-breadcrumb">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a asp-page="home" class="breadcrumb-link">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Admin Dashboard</li>
+
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+<div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="text-muted">USERS</h5>
+            <div class="metric-value d-inline-block">
+                    <h1 class="mb-1 text-primary">@Model.TotalUsers </h1>
+            </div>
+            <div class="metric-label d-inline-block float-right text-success">
+                <i class="fa fa-fw fa-caret-up"></i><span></span>
+            </div>
+        </div>
+        <div id="sparkline"></div>
+    </div>
+</div>
+<!-- /. metric -->
+<!-- metric -->
+<div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="text-muted">BOOKS</h5>
+            <div class="metric-value d-inline-block">
+                    <h1 class="mb-1 text-primary">@Model.TotalBooks </h1>
+            </div>
+            <div class="metric-label d-inline-block float-right text-success">
+                <i class="fa fa-fw fa-caret-up"></i><span></span>
+            </div>
+        </div>
+        <div id="sparkline"></div>
+    </div>
+</div>
+<!-- /. metric -->
+<!-- metric -->
+<div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+    <div class="card">
+        <div class="card-body">
+                <h5 class="text-muted">CATEGORY</h5>
+            <div class="metric-value d-inline-block">
+                <h1 class="mb-1 text-primary">@Model.TotalCategory </h1>
+            </div>
+            <div class="metric-label d-inline-block float-right text-success">
+                <i class="fa fa-fw fa-caret-up"></i><span></span>
+            </div>
+        </div>
+        <div id="sparkline"></div>
+    </div>
+</div>
+
+<div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+    <div class="card">
+        <div class="card-body">
+                <h5 class="text-muted">TRANSACTION</h5>
+            <div class="metric-value d-inline-block">
+                <h1 class="mb-1 text-primary"> @Model.TotalTransaction </h1>
+            </div>
+            <div class="metric-label d-inline-block float-right text-success">
+                <i class="fa fa-fw fa-caret-up"></i><span></span>
+            </div>
+        </div>
+        <div id="sparkline"></div>
+    </div>
+</div>
+</div>
+<!-- /. metric -->
+<div class="row">
+    <div class="col-xl-8 col-lg-12 col-md-8 col-sm-12 col-12">
+        <div class="card">
+
+            <h5 class="card-header">
+                Revenue<a>
+
+                </a>
+            </h5>
+            <div class="card-body">
+                <canvas id="myChart" width="400" height="150"></canvas>
+            </div>
+      
+        </div>
+    </div>
+
+    <div class="col-xl-4 col-lg-12 col-md-4 col-sm-12 col-12">
+        <div class="card">
+            <h5 class="card-header">Total</h5>
+            <div class="card-body">
+                <canvas id="myPieChart" width="220" height="155"></canvas>
+                <div class="chart-widget-list" style="text-align: center;">
+                    <h5 style="display: block;"> Total Amount</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- end total sale  -->
+    <!-- ============================================================== -->
+</div>
+<div class="row">
+    <!-- ============================================================== -->
+    <!-- top selling products  -->
+    <!-- ============================================================== -->
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="card">
+            <h5 class="card-header">Top Selling Products</h5>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class="bg-light">
+                            <tr class="border-0">
+                                <th class="border-0" onclick="sortTable(0)">BookID</th>
+                                <th class="border-0" onclick="sortTable(1)">Title</th>
+                                <th class="border-0" onclick="sortTable(2)">Author</th>
+                                <th class="border-0" onclick="sortTable(3)">Publisher</th>
+                                <th class="border-0" onclick="sortTable(4)">YearPublished</th>
+                                <th class="border-0" onclick="sortTable(5)">ISBN</th>
+                                <th class="border-0" onclick="sortTable(6)">Category</th>
+                                <th class="border-0" onclick="sortTable(7)">Quantity</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var emp in Model.BookHot)
+                            {
+                                <tr>
+                                    <td>@emp.BookId</td>
+                                    <td>@emp.Title</td>
+                                    <td>@emp.Author?.AuthorName</td>
+                                    <td>@emp.Publisher?.PublisherName</td>
+                                    <td>@emp.YearPublished</td>
+                                    <td>@emp.Isbn</td>
+                                    <td>@emp.Category?.CategoryName</td>
+                                    <td>@emp.Quantity</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Chuyển đổi số tháng thành tên tháng
+    function getMonthName(monthNumber) {
+        const months = ["January", "February", "March", "April", "May", "June", 
+                       "July", "August", "September", "October", "November", "December"];
+        return months[monthNumber - 1];
+    }
+
+    // Lấy dữ liệu từ Model
+    const transactions = @Html.Raw(Json.Serialize(Model.transactions));
+    
+    // Chuẩn bị dữ liệu cho biểu đồ
+    const labels = transactions.map(t => getMonthName(t.month));
+    const borrowData = transactions.map(t => t.borrowCount);
+    const returnData = transactions.map(t => t.returnCount);
+
+    new Chart("myChart", {
+        type: "bar",
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Sách Đã Mượn',
+                backgroundColor: "#9c9ab5",
+                data: borrowData
+            }, {
+                label: 'Sách Đã Trả',
+                backgroundColor: "#6c6b7e",
+                data: returnData
+            }]
+        },
+        options: {
+            plugins: {
+                title: {
+                    display: true,
+                    text: "Book Transactions by Month"
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            },
+            responsive: true,
+            legend: {
+                display: true,
+                position: 'top'
+            }
+        }
+    });
+</script>
+        <script>
+            const transactionCount = @Html.Raw(Json.Serialize(Model.transactionsCount));
+
+            const statusMapping = {
+                1: "Chưa Trả",
+                2: "Đã Trả",
+                3: "Trễ Hạn",
+                4: "Đăng kí mượn",
+                5: "Xác Nhận",
+                6: "Hủy"
+            };
+
+            const label1 = transactionCount.map(x => statusMapping[x.status] || "Unknown"); // Dùng ánh xạ ở đây
+            const data1 = transactionCount.map(x => x.statusCount);
+
+            var barColors = [
+                "#b91d47",
+                "#00aba9",
+                "#2b5797",
+                "#e8c3b9",
+                "#1e7145"
+            ];
+
+            new Chart("myPieChart", {
+                type: "pie",
+                data: {
+                    labels: label1,
+                    datasets: [{
+                        backgroundColor: barColors,
+                        data: data1
+                    }]
+                },
+                options: {
+                    title: {
+                        display: false,
+
+                    }
+                }
+            });
+        </script>
+        <script src="~/assets/vendor/charts/sparkline/jquery.sparkline.js"></script>
+        <script src="~/assets/vendor/charts/sparkline/spark-js.js"></script>

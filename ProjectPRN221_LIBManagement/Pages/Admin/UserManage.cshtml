@@ -93,6 +93,7 @@
 </style>
 
 
+        <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top: 93px;">
                 @if (TempData["ErrorMessage"] != null)
                 {
@@ -124,8 +125,8 @@
                         </div>
                     </form>
 
-                    <div style="margin-left: -700px; margin-top: -13px">
-                        <a asp-page="AddUser" class="btn btn-danger">Add User</a>
+                    <div>
+                        <a asp-page="AddUser" class="btn btn-danger" style="margin-left: -430px; margin-top: -13px">Add User</a>
                     </div>
 
                     <div class="input-group rounded search-p">
@@ -198,60 +199,26 @@
                     </div>
                 </div>
             </div>
+        </div>
 
-@section Scripts {
-    <script>
-        function sortTable(colIndex) {
-            var table = document.getElementById('userTable');
-            var rows = table.rows;
-            var switching = true;
-            var shouldSwitch = false;
-            var dir = 'asc';
 
-            while (switching) {
-                switching = false;
-                for (var i = 1; i < rows.length - 1; i++) {
-                    shouldSwitch = false;
-                    var x = rows[i].getElementsByTagName('td')[colIndex];
-                    var y = rows[i + 1].getElementsByTagName('td')[colIndex];
+<script>
+    function sortTable(colIndex) {
+        var table = document.getElementById('userTable');
+        var rows = Array.from(table.rows).slice(1); // Lấy các hàng trừ hàng tiêu đề
+        var isAsc = table.getAttribute('data-sort-asc') !== 'true';
 
-                    if (colIndex === 0) {
-                        if (dir == 'asc') {
-                            if (parseInt(x.innerHTML) > parseInt(y.innerHTML)) {
-                                shouldSwitch = true;
-                                break;
-                            }
-                        } else if (dir == 'desc') {
-                            if (parseInt(x.innerHTML) < parseInt(y.innerHTML)) {
-                                shouldSwitch = true;
-                                break;
-                            }
-                        }
-                    } else {
-                        if (dir == 'asc') {
-                            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-                                shouldSwitch = true;
-                                break;
-                            }
-                        } else if (dir == 'desc') {
-                            if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-                                shouldSwitch = true;
-                                break;
-                            }
-                        }
-                    }
-                }
-                if (shouldSwitch) {
-                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-                    switching = true;
-                } else {
-                    if (dir == 'asc') {
-                        dir = 'desc';
-                    } else {
-                        dir = 'asc';
-                    }
-                }
-            }
-        }
-    </script>
-}
+        rows.sort((a, b) => {
+            var x = a.cells[colIndex].innerText;
+            var y = b.cells[colIndex].innerText;
+
+            // Kiểm tra nếu là số thì so sánh theo giá trị số
+            return colIndex === 0
+                ? (isAsc ? x - y : y - x)
+                : (isAsc ? x.localeCompare(y) : y.localeCompare(x));
+        });
+
+        rows.forEach(row => table.appendChild(row)); // Cập nhật bảng
+        table.setAttribute('data-sort-asc', isAsc); // Đổi hướng sắp xếp
+    }
+</script>

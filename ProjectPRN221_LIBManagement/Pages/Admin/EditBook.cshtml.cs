@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Http;
 using ProjectPRN221_LIBManagement.Models;
 using System.IO;
-using System.Linq;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -43,7 +42,6 @@ namespace ProjectPRN221_LIBManagement.Pages.Admin
         public async Task<IActionResult> OnPostAsync()
         {
             var book = _context.Books.Find(books.BookId);
-
             if (book == null)
             {
                 return NotFound();
@@ -58,6 +56,7 @@ namespace ProjectPRN221_LIBManagement.Pages.Admin
             book.YearPublished = books.YearPublished;
             book.Isbn = books.Isbn;
 
+            // Nếu có ảnh mới, lưu ảnh và cập nhật URL của ảnh trong database
             if (ImageFile != null && ImageFile.Length > 0)
             {
                 string imageUrl = await SaveImageAsync();
@@ -78,27 +77,29 @@ namespace ProjectPRN221_LIBManagement.Pages.Admin
         private async Task<string> SaveImageAsync()
         {
             var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif" };
-
             var fileExtension = Path.GetExtension(ImageFile.FileName).ToLowerInvariant();
 
             if (!allowedExtensions.Contains(fileExtension))
             {
-                ModelState.AddModelError("ImageFile", "Only .jpg, .jpeg, .png and .gif files are allowed");
+                ModelState.AddModelError("ImageFile", "Allowed formats: .jpg, .jpeg, .png, .gif");
                 return null;
             }
 
-            var uniqueFileName = Guid.NewGuid() + fileExtension;
+            var filePath = Path.Combine(_environment.WebRootPath, "images", Guid.NewGuid() + fileExtension);
+            Directory.CreateDirectory(Path.GetDirectoryName(filePath));  // Ensure directory exists
 
-            var imagesPath = Path.Combine(_environment.WebRootPath, "images");
-            Directory.CreateDirectory(imagesPath);
-
-            var filePath = Path.Combine(imagesPath, uniqueFileName);
-            using (var stream = new FileStream(filePath, FileMode.Create))
+            try
             {
+                using var stream = new FileStream(filePath, FileMode.Create);
                 await ImageFile.CopyToAsync(stream);
+                return "/images/" + Path.GetFileName(filePath);
             }
-
-            return "/images/" + uniqueFileName;
+            catch (Exception)
+            {
+                ModelState.AddModelError("ImageFile", "Error saving image");
+                return null;
+            }
         }
+
     }
 }

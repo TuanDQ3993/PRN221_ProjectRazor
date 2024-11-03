@@ -21,6 +21,8 @@ namespace ProjectPRN221_LIBManagement.Pages.Admin
         [BindProperty]
         public int YearPublished { get; set; }
         [BindProperty]
+        public string Description { get; set; }
+        [BindProperty]
         public string Isbn { get; set; }
         [BindProperty]
         public string Description { get; set; }
@@ -72,6 +74,7 @@ namespace ProjectPRN221_LIBManagement.Pages.Admin
                 Title = Title.Trim(),
                 Description = Description,
                 AuthorId = AuthorId,
+                Description = Description.Trim(),
                 PublisherId = PublisherId,
                 YearPublished = YearPublished,
                 Isbn = Isbn?.Trim(),
@@ -82,7 +85,7 @@ namespace ProjectPRN221_LIBManagement.Pages.Admin
 
             _context.Books.Add(book);
             await _context.SaveChangesAsync();
-            TempData["SuccessMessage"] = "Book added successfully!";
+            TempData["Message"] = "Book added successfully!";
 
             return RedirectToPage("BooksManage");
         }

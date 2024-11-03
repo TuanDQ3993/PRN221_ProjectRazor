@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ProjectPRN221_LIBManagement.Models
 {
@@ -16,5 +17,20 @@ namespace ProjectPRN221_LIBManagement.Models
         public virtual Book? Book { get; set; }
         public virtual Status? StatusNavigation { get; set; }
         public virtual User? User { get; set; }
+
+        // Thêm thuộc tính cho tháng
+        [NotMapped]
+        public int Month { get; set; }
+
+        // Thêm thuộc tính cho số lượng mượn và trả
+        [NotMapped]
+
+        public int BorrowCount { get; set; }
+        [NotMapped]
+
+        public int ReturnCount { get; set; }
+
+        [NotMapped]
+        public int StatusCount { get; set; }
     }
 }

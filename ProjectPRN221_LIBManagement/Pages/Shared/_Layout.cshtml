@@ -1,15 +1,11 @@
-﻿@using Microsoft.AspNetCore.Mvc.Rendering
-@{
-    string GetActiveClass(string page)
+﻿@functions {
+    public string GetActiveClass(string page)
     {
-        var currentPage = ViewContext.RouteData.Values["Page"] as string;
-        return currentPage?.Contains(page) == true ? "active" : "";
+        var currentPath = Context.Request.Path;
+        return currentPath.Equals(page, StringComparison.OrdinalIgnoreCase) ? "active" : "";
     }
 }
 
-
-
-1
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,7 +29,7 @@
     <header>
         <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand" href="index.html">Concept</a>
+                <a class="navbar-brand" asp-page="./home">JQK Book</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -43,12 +39,11 @@
                             <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle"></a>
                             <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
                                 <div class="nav-user-info">
-                                    <h5 class="mb-0 text-white nav-user-name">John Abraham </h5>
-                                    <span class="status"></span><span class="ml-2">Available</span>
+                                    <h5 class="mb-0 text-white nav-user-name">Admin </h5>
+                                    
                                 </div>
-                                <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Account</a>
-                                <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>Setting</a>
-                                <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                                <a class="dropdown-item" href="/"><i class="fas fa-user mr-2"></i>Home</a>
+                                <a class="dropdown-item" href="/logout"><i class="fas fa-power-off mr-2"></i>Logout</a>
                             </div>
                         </li>
                     </ul>
@@ -59,6 +54,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-4 nav-left-sidebar sidebar-dark">
+
                 <div class="menu-list">
                     <nav class="navbar navbar-expand-lg navbar-light">
                         <a class="d-xl-none d-lg-none" href="#">Dashboard</a>
@@ -69,6 +65,12 @@
                             <ul class="navbar-nav flex-column">
                                 <li class="nav-divider">
                                     Menu
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link @GetActiveClass("/Admin/Dashboard")" asp-page="/Admin/Dashboard">
+                                        <i class="fas fa-fw fa-chart-pie"></i>
+                                        Dashboard
+                                    </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link @GetActiveClass("/Admin/BooksManage")" asp-page="/Admin/BooksManage">
@@ -85,7 +87,7 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link @GetActiveClass("/Admin/TransactionManage")" asp-page="/Admin/TransactionManage">
+                                    <a class="nav-link @GetActiveClass("/Admin/TransactionsManage")" asp-page="/Admin/TransactionsManage">
                                         <i class="fas fa-fw fa-chart-pie"></i>
                                         Transactions Manager
                                     </a>
@@ -106,26 +108,28 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link @GetActiveClass("/Admin/CategorysManage")" asp-page="/Admin/CategorysManage">
+                                    <a class="nav-link @GetActiveClass("/Admin/CategorysManage")" href="/Admin/CategorysManage">
                                         <i class="fas fa-fw fa-chart-pie"></i>
                                         Categories Manager
                                     </a>
                                 </li>
-                            </ul>
                         </div>
-                    </nav>
+                        </li>
+                        </ul>
                 </div>
+                </nav>
+
             </div>
 
             <div class="dashboard-wrapper" style="width: 100%;">
                 <div class="container-fluid  dashboard-content">
-                    <div class="row">
-                        @RenderBody()
-                    </div>
+
+                    @RenderBody()
 
                 </div>
             </div>
         </div>
+
     </div>
 
     <footer class="border-top footer text-muted">
