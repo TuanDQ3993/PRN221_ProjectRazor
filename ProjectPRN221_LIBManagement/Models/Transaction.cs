@@ -29,5 +29,8 @@ namespace ProjectPRN221_LIBManagement.Models
         [NotMapped]
 
         public int ReturnCount { get; set; }
+
+        [NotMapped]
+        public int StatusCount { get; set; }
     }
 }

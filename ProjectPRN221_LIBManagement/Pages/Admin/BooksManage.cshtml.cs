@@ -16,6 +16,7 @@ namespace ProjectPRN221_LIBManagement.Pages.Admin
         }
 
         public PaginatedList<Book> Books { get; set; }
+
         [BindProperty]
         public IFormFile ExcelFile { get; set; }
         public IList<Author> authors = new List<Author>();

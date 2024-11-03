@@ -137,62 +137,24 @@
         <script src="~/assets/vendor/charts/sparkline/spark-js.js"></script>
         <!-- dashboard sales js-->
         <script src="~/assets/libs/js/dashboard-sales.js"></script>
-        <script>
-            function sortTable(colIndex) {
-                var table = document.getElementById('userTable');
-                var rows = table.rows;
-                var switching = true;
-                var shouldSwitch = false;
-                var dir = 'asc';
+<script>
+    function sortTable(colIndex) {
+        var table = document.getElementById('userTable');
+        var rows = Array.from(table.rows).slice(1); // Lấy các hàng trừ hàng tiêu đề
+        var isAsc = table.getAttribute('data-sort-asc') !== 'true';
 
-                while (switching) {
-                    switching = false;
-                    for (var i = 1; i < rows.length - 1; i++) {
-                        shouldSwitch = false;
-                        var x = rows[i].getElementsByTagName('td')[colIndex];
-                        var y = rows[i + 1].getElementsByTagName('td')[colIndex];
-                        if (colIndex === 0) { // If sorting by id column
-                            if (dir == 'asc') {
-                                if (parseInt(x.innerHTML) > parseInt(y.innerHTML)) {
-                                    shouldSwitch = true;
-                                    break;
-                                }
-                            } else if (dir == 'desc') {
-                                if (parseInt(x.innerHTML) < parseInt(y.innerHTML)) {
-                                    shouldSwitch = true;
-                                    break;
-                                }
-                            }
-                        } else {
-                            if (dir == 'asc') {
-                                if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-                                    shouldSwitch = true;
-                                    break;
-                                }
-                            } else if (dir == 'desc') {
-                                if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-                                    shouldSwitch = true;
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                    if (shouldSwitch) {
-                        rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-                        switching = true;
-                    } else {
-                        if (dir == 'asc') {
-                            dir = 'desc';
-                        } else {
-                            dir = 'asc';
-                        }
-                    }
-                }
-            }
+        rows.sort((a, b) => {
+            var x = a.cells[colIndex].innerText;
+            var y = b.cells[colIndex].innerText;
 
+            // Kiểm tra nếu là số thì so sánh theo giá trị số
+            return colIndex === 0
+                ? (isAsc ? x - y : y - x)
+                : (isAsc ? x.localeCompare(y) : y.localeCompare(x));
+        });
 
-
-
-        </script>
-
+        rows.forEach(row => table.appendChild(row)); // Cập nhật bảng
+        table.setAttribute('data-sort-asc', isAsc); // Đổi hướng sắp xếp
+    }
+</script>
 
