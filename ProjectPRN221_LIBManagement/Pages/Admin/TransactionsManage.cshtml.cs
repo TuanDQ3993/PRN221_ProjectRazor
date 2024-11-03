@@ -26,10 +26,17 @@ namespace ProjectPRN221_LIBManagement.Pages.Admin
         [BindProperty(SupportsGet = true)]
         public int SearchType { get; set; }
 
-        public void OnGet()
+        public IActionResult OnGet()
         {
+            var role = HttpContext.Session.GetInt32("UserRole");
+
+            if (role == null || role != 1) 
+            {
+                return RedirectToPage("/Home/AccessDenied"); 
+            }
             status = PRN221_LibContext.Ins.Statuses.ToList();
             transactions = FilterTransactions(); // Lấy dữ liệu theo điều kiện lọc
+            return Page();
         }
 
         private List<Transaction> FilterTransactions()

@@ -25,6 +25,7 @@ namespace ProjectPRN221_LIBManagement.Pages
 				if (user.Role != null)
 				{
                     HttpContext.Session.SetInt32("UserID", user.UserId);
+                    HttpContext.Session.SetInt32("UserRole", user.Role);
                     if (user.Role == 1)
 					{
 						return RedirectToPage("/Admin/BooksManage"); 
