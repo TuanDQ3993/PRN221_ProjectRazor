@@ -26,8 +26,11 @@ namespace ProjectPRN221_LIBManagement.Pages.Home
         public Book? Book { get; set; }
         public string? ErrorMessage { get; set; }
 
+        public int? UserId { get; set; }
+
         public async Task<IActionResult> OnGetAsync(int? id)
         {
+            UserId = HttpContext.Session.GetInt32("UserID");
             if (id == null)
             {
                 Redirect("/Home/ShopDetails");

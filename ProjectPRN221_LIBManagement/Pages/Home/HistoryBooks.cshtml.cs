@@ -18,16 +18,18 @@ namespace ProjectPRN221_LIBManagement.Pages.Home
 
         [BindProperty(SupportsGet = true)]
         public int Status { get; set; } = 0;
+
+        public int? UserId { get; set; }
         public void OnGet()
         {
-            int? userId = HttpContext.Session.GetInt32("UserID");
+            UserId = HttpContext.Session.GetInt32("UserID");
 
             statuses = PRN221_LibContext.Ins.Statuses.ToList();
 
             var query = PRN221_LibContext.Ins.Transactions
             .Include(x => x.Book)
             .Include(x => x.StatusNavigation)
-            .Where(x => x.UserId == userId);
+            .Where(x => x.UserId == UserId);
             
 
             if (!string.IsNullOrEmpty(Search))

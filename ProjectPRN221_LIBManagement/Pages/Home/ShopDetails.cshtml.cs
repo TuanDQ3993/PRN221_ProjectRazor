@@ -11,12 +11,15 @@ namespace ProjectPRN221_LIBManagement.Pages.Home
         public Book? BookDetails { get; set; }
         public List<Book>? RelatedBook { get; set; }
         public List<Category>? Categories { get; set; }
+
+        public int? UserId { get; set; }
         public ShopDetailsModel(PRN221_LibContext context)
         {
             _context = context;
         }
         public async Task<IActionResult> OnGetAsync(int id)
         {
+            UserId = HttpContext.Session.GetInt32("UserID");
             //bookDetail
             BookDetails = await _context.Books
                         .Include(b => b.Author)

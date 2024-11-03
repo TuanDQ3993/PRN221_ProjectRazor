@@ -1,7 +1,7 @@
 
 ﻿using Microsoft.AspNetCore.Http.Features;
 using Microsoft.EntityFrameworkCore;
-
+using ProjectPRN221_LIBManagement.authorization;
 using ProjectPRN221_LIBManagement.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -38,6 +38,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 app.UseSession(); // Kích hoạt session
+app.UseMiddleware<AuthorizationMiddleware>();
 
 app.UseAuthorization();
 
