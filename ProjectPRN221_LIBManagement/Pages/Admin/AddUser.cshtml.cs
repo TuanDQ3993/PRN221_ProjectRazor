@@ -37,8 +37,8 @@ namespace ProjectPRN221_LIBManagement.Pages.Admin
             roles = _context.Roles.ToList();
         }
         public IActionResult OnPost()
-        {   
-            if(_context.Users.Any(u => u.Email == Email))
+        {
+            if (_context.Users.Any(u => u.Email == Email))
             {
                 ModelState.AddModelError("Email", "Email exist already!");
                 roles = _context.Roles.ToList();
@@ -49,7 +49,7 @@ namespace ProjectPRN221_LIBManagement.Pages.Admin
             {
                 FullName = FullName,
                 Email = Email,
-                Password = Password,
+                Password = HashPassword(Password),
                 Role = Roleid,
                 Address = Address,
                 PhoneNumber = phoneNumber,
@@ -59,6 +59,12 @@ namespace ProjectPRN221_LIBManagement.Pages.Admin
             _context.Users.Add(users);
             _context.SaveChanges();
             return Redirect("UserManage");
+        }
+
+        public string HashPassword(string password)
+        {
+
+            return BCrypt.Net.BCrypt.HashPassword(password);
         }
     }
 }

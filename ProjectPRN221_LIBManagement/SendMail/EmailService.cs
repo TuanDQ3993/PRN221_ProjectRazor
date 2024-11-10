@@ -72,7 +72,7 @@ namespace ProjectPRN221_LIBManagement
                         string subject = "Lời nhắc: Sách của bạn sẽ đến hạn vào ngày mai!";
                         string body = $@"Xin chào {transaction.User.FullName},
                     <br><br>
-                    Sách '{transaction.Book.Title}' của bạn sẽ đến hạn vào ngày mai. Hãy đảm bảo trả lại đúng hạn.
+                    Sách '{transaction.Book.Title}' của bạn sẽ đến hạn vào ngày mai({DateTime.Now.AddDays(1).ToString("dd/MM/yyyy")}). Hãy đảm bảo trả lại đúng hạn.
                     <br><br>
                     Thanks,<br>
                     JQKBook Library Team";

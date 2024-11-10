@@ -31,7 +31,7 @@ namespace ProjectPRN221_LIBManagement.Pages
             }
 
             
-            if (user.Password != OldPassword)
+            if (!VerifyPassword(OldPassword,user.Password))
             {
                 ModelState.AddModelError("OldPassword", "Mật khẩu cũ không chính xác.");
                 return Page();
@@ -45,12 +45,17 @@ namespace ProjectPRN221_LIBManagement.Pages
             }
 
             
-            user.Password = NewPassword;
+            user.Password = BCrypt.Net.BCrypt.HashPassword(NewPassword);
             PRN221_LibContext.Ins.Users.Update(user);
             PRN221_LibContext.Ins.SaveChanges();
 
             TempData["SuccessMessage"] = "Mật khẩu đã được thay đổi thành công!";
             return RedirectToPage("ChangePassword"); 
+        }
+        public bool VerifyPassword(string enteredPassword, string hashedPassword)
+        {
+
+            return BCrypt.Net.BCrypt.Verify(enteredPassword, hashedPassword);
         }
     }
 }

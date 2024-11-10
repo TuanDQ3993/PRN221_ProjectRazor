@@ -6,50 +6,57 @@ namespace ProjectPRN221_LIBManagement.Pages
 {
     public class LoginModel : PageModel
     {
-		[BindProperty]
-		public string Username { get; set; }
-		[BindProperty]
-		public string Password { get; set; }
+        [BindProperty]
+        public string Username { get; set; }
+        [BindProperty]
+        public string Password { get; set; }
 
-		public void OnGet()
-		{
-		}
+        public void OnGet()
+        {
+        }
 
-		public IActionResult OnPost()
-		{
-			var user = PRN221_LibContext.Ins.Users
-								   .SingleOrDefault(u => u.Email == Username && u.Password == Password);
-			if (user.IsBan== true)
-			{
-                ModelState.AddModelError(string.Empty, "Tài khoản đã bị khóa.");
-			}
-			else
-			{
-                if (user != null)
+        public IActionResult OnPost()
+        {
+            string hashedPassword = BCrypt.Net.BCrypt.HashPassword("123");
+            Console.WriteLine(hashedPassword);
+            var user = PRN221_LibContext.Ins.Users
+                                   .SingleOrDefault(u => u.Email == Username);
+            if (user != null && VerifyPassword(Password, user.Password))
+            {
+                if (user.IsBan == true)
                 {
-                    if (user.Role != null)
-                    {
-                        HttpContext.Session.SetInt32("UserID", user.UserId);
-                        HttpContext.Session.SetInt32("UserRole", user.Role);
-                        if (user.Role == 1)
-                        {
-                            return RedirectToPage("/Admin/BooksManage");
-                        }
-                        else
-                        {
-
-                            return RedirectToPage("home/home");
-                        }
-                    }
+                    ModelState.AddModelError(string.Empty, "Tài khoản đã bị khóa.");
                 }
                 else
                 {
-                    ModelState.AddModelError(string.Empty, "Tên đăng nhập hoặc mật khẩu không đúng.");
+
+                    HttpContext.Session.SetInt32("UserID", user.UserId);
+                    HttpContext.Session.SetInt32("UserRole", user.Role);
+                    if (user.Role == 1)
+                    {
+                        return RedirectToPage("/Admin/BooksManage");
+                    }
+                    else
+                    {
+
+                        return RedirectToPage("home/home");
+                    }
+
                 }
             }
-			
-			return Page();
+            else
+            {
+                ModelState.AddModelError(string.Empty, "Tên đăng nhập hoặc mật khẩu không đúng.");
+            }
 
-		}
+            return Page();
+
+        }
+
+        public bool VerifyPassword(string enteredPassword, string hashedPassword)
+        {
+
+            return BCrypt.Net.BCrypt.Verify(enteredPassword, hashedPassword);
+        }
     }
 }
