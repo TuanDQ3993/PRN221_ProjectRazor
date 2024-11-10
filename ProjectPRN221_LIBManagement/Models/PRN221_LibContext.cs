@@ -7,12 +7,11 @@ namespace ProjectPRN221_LIBManagement.Models
 {
     public partial class PRN221_LibContext : DbContext
     {
-        public static PRN221_LibContext Ins = new PRN221_LibContext();
+        public static PRN221_LibContext Ins=new PRN221_LibContext();
         public PRN221_LibContext()
         {
-            if (Ins == null)
-            {
-                Ins = this;
+            if (Ins == null) { 
+            Ins=this;
             }
         }
 
@@ -23,6 +22,7 @@ namespace ProjectPRN221_LIBManagement.Models
 
         public virtual DbSet<Author> Authors { get; set; } = null!;
         public virtual DbSet<Book> Books { get; set; } = null!;
+        public virtual DbSet<BookCondition> BookConditions { get; set; } = null!;
         public virtual DbSet<Category> Categories { get; set; } = null!;
         public virtual DbSet<Publisher> Publishers { get; set; } = null!;
         public virtual DbSet<Role> Roles { get; set; } = null!;
@@ -41,7 +41,7 @@ namespace ProjectPRN221_LIBManagement.Models
         {
             modelBuilder.Entity<Author>(entity =>
             {
-                entity.HasIndex(e => e.AuthorName, "UQ__Authors__4A1A120B3514A74B")
+                entity.HasIndex(e => e.AuthorName, "UQ__Authors__4A1A120BD3E409D8")
                     .IsUnique();
 
                 entity.Property(e => e.AuthorId).HasColumnName("AuthorID");
@@ -51,7 +51,7 @@ namespace ProjectPRN221_LIBManagement.Models
 
             modelBuilder.Entity<Book>(entity =>
             {
-                entity.HasIndex(e => e.Isbn, "UQ__Books__447D36EA298614AB")
+                entity.HasIndex(e => e.Isbn, "UQ__Books__447D36EA4E0957A9")
                     .IsUnique();
 
                 entity.Property(e => e.BookId).HasColumnName("BookID");
@@ -88,9 +88,22 @@ namespace ProjectPRN221_LIBManagement.Models
                     .HasConstraintName("FK_Books_Publishers");
             });
 
+            modelBuilder.Entity<BookCondition>(entity =>
+            {
+                entity.HasKey(e => e.ConditionId)
+                    .HasName("PK__BookCond__37F5C0EF79EC5AB9");
+
+                entity.HasIndex(e => e.ConditionName, "UQ__BookCond__CE7E60669A52D0B6")
+                    .IsUnique();
+
+                entity.Property(e => e.ConditionId).HasColumnName("ConditionID");
+
+                entity.Property(e => e.ConditionName).HasMaxLength(50);
+            });
+
             modelBuilder.Entity<Category>(entity =>
             {
-                entity.HasIndex(e => e.CategoryName, "UQ__Categori__8517B2E0ADD70B90")
+                entity.HasIndex(e => e.CategoryName, "UQ__Categori__8517B2E0F3EB1E55")
                     .IsUnique();
 
                 entity.Property(e => e.CategoryId).HasColumnName("CategoryID");
@@ -100,7 +113,7 @@ namespace ProjectPRN221_LIBManagement.Models
 
             modelBuilder.Entity<Publisher>(entity =>
             {
-                entity.HasIndex(e => e.PublisherName, "UQ__Publishe__5F0E224919C450C1")
+                entity.HasIndex(e => e.PublisherName, "UQ__Publishe__5F0E2249BD9EFD9D")
                     .IsUnique();
 
                 entity.Property(e => e.PublisherId).HasColumnName("PublisherID");
@@ -124,6 +137,8 @@ namespace ProjectPRN221_LIBManagement.Models
             {
                 entity.Property(e => e.TransactionId).HasColumnName("TransactionID");
 
+                entity.Property(e => e.BookConditionOnBorrow).HasDefaultValueSql("((1))");
+
                 entity.Property(e => e.BookId).HasColumnName("BookID");
 
                 entity.Property(e => e.BorrowDate)
@@ -135,6 +150,17 @@ namespace ProjectPRN221_LIBManagement.Models
                 entity.Property(e => e.ReturnDate).HasColumnType("date");
 
                 entity.Property(e => e.UserId).HasColumnName("UserID");
+
+                entity.HasOne(d => d.BookConditionOnBorrowNavigation)
+                    .WithMany(p => p.TransactionBookConditionOnBorrowNavigations)
+                    .HasForeignKey(d => d.BookConditionOnBorrow)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_Transactions_BookConditionOnBorrow");
+
+                entity.HasOne(d => d.BookConditionOnReturnNavigation)
+                    .WithMany(p => p.TransactionBookConditionOnReturnNavigations)
+                    .HasForeignKey(d => d.BookConditionOnReturn)
+                    .HasConstraintName("FK_Transactions_BookConditionOnReturn");
 
                 entity.HasOne(d => d.Book)
                     .WithMany(p => p.Transactions)
@@ -154,7 +180,7 @@ namespace ProjectPRN221_LIBManagement.Models
 
             modelBuilder.Entity<User>(entity =>
             {
-                entity.HasIndex(e => e.Email, "UQ__Users__A9D10534B9B3E429")
+                entity.HasIndex(e => e.Email, "UQ__Users__A9D1053486E1CC14")
                     .IsUnique();
 
                 entity.Property(e => e.UserId).HasColumnName("UserID");

@@ -19,11 +19,18 @@ namespace ProjectPRN221_LIBManagement.Pages.Admin
 
         [BindProperty]
         public DateTime BorrowDate { get; set; }
+
+        [BindProperty]
+        public int Condition { get; set; }
+
+        public List<BookCondition> bookCondition { get; set; }
         public void OnGet()
         {
+            bookCondition=PRN221_LibContext.Ins.BookConditions.ToList();
         }
 
         public IActionResult OnPost() {
+            
             if (!PRN221_LibContext.Ins.Users.Any(u => u.Email == Email))
             {
                 ModelState.AddModelError("Email", "Email don't exist in the system!");
@@ -45,7 +52,8 @@ namespace ProjectPRN221_LIBManagement.Pages.Admin
                     BookId = book.BookId,
                     BorrowDate = BorrowDate,
                     DueDate = ReturnDate,
-                    Status = 1 // Dki muon
+                    Status = 1, // Dki muon
+                    BookConditionOnBorrow = Condition
                 };
                 PRN221_LibContext.Ins.Transactions.Add(transaction);
                 PRN221_LibContext.Ins.SaveChanges();

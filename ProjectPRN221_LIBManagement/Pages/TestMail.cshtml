@@ -1,0 +1,18 @@
+﻿@page
+@model ProjectPRN221_LIBManagement.Pages.TestMailModel
+@{
+    ViewData["Title"] = "Test Mail";
+}
+
+<h2>Test Gửi Mail</h2>
+
+<form method="post">
+    <button type="submit" class="btn btn-primary">Gửi Mail Test</button>
+</form>
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-info">
+        @TempData["Message"]
+    </div>
+}

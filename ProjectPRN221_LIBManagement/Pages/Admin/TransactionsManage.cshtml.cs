@@ -11,6 +11,8 @@ namespace ProjectPRN221_LIBManagement.Pages.Admin
         public List<Status> status { get; set; }
         public List<Transaction> transactions { get; set; }
 
+        public List<BookCondition> bookConditions { get; set; }
+
         [BindProperty(SupportsGet = true)]
         public DateTime? StartDate { get; set; }
 
@@ -28,13 +30,16 @@ namespace ProjectPRN221_LIBManagement.Pages.Admin
 
         public IActionResult OnGet()
         {
+            
             var role = HttpContext.Session.GetInt32("UserRole");
 
             if (role == null || role != 1) 
             {
                 return RedirectToPage("/Home/AccessDenied"); 
             }
+            updateStatus();
             status = PRN221_LibContext.Ins.Statuses.ToList();
+            bookConditions=PRN221_LibContext.Ins.BookConditions.ToList();
             transactions = FilterTransactions(); // Lấy dữ liệu theo điều kiện lọc
             return Page();
         }
@@ -71,6 +76,14 @@ namespace ProjectPRN221_LIBManagement.Pages.Admin
 
             return query.ToList();
         }
+
+        private void updateStatus() {
+            PRN221_LibContext.Ins.Database.ExecuteSqlRaw(
+           @"UPDATE Transactions
+          SET Status = 3
+          WHERE DueDate < GETDATE() AND ReturnDate IS NULL AND Status = 1;");
+        } 
+
 
         public IActionResult OnPost()
         {

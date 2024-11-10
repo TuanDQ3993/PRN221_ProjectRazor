@@ -24,8 +24,7 @@ namespace ProjectPRN221_LIBManagement.Pages.Admin
         public string Description { get; set; }
         [BindProperty]
         public string Isbn { get; set; }
-        [BindProperty]
-        public string Description { get; set; }
+        
         [BindProperty]
         public int CategoryId { get; set; }
         [BindProperty]
@@ -72,7 +71,6 @@ namespace ProjectPRN221_LIBManagement.Pages.Admin
             var book = new Book
             {
                 Title = Title.Trim(),
-                Description = Description,
                 AuthorId = AuthorId,
                 Description = Description.Trim(),
                 PublisherId = PublisherId,

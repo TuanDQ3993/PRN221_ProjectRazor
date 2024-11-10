@@ -23,7 +23,7 @@ namespace ProjectPRN221_LIBManagement.Pages.Home
         public void OnGet()
         {
             UserId = HttpContext.Session.GetInt32("UserID");
-
+            updateStatus();
             statuses = PRN221_LibContext.Ins.Statuses.ToList();
 
             var query = PRN221_LibContext.Ins.Transactions
@@ -44,6 +44,14 @@ namespace ProjectPRN221_LIBManagement.Pages.Home
 
             Transactions = query.ToList();
 
+        }
+
+        private void updateStatus()
+        {
+            PRN221_LibContext.Ins.Database.ExecuteSqlRaw(
+           @"UPDATE Transactions
+          SET Status = 3
+          WHERE DueDate < GETDATE() AND ReturnDate IS NULL AND Status = 1;");
         }
     }
 }

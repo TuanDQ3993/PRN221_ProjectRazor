@@ -64,6 +64,35 @@
     .search-p {
         justify-content: right;
     }
+
+    .popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .popup-content {
+        background: #fff;
+        padding: 20px;
+        width: 500px;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
 </style>
 
 <div class="row">
@@ -138,7 +167,11 @@
                             @foreach (var trans in Model.transactions)
                             {
                                 <tr>
-                                    <td>@trans.TransactionId</td>
+                                    <td>
+                                        <a href="/Admin/TransactionDetail?tid=@trans.TransactionId">
+                                            @trans.TransactionId
+                                        </a>
+                                    </td>
                                     <td>@trans.User.Email (@trans.User.FullName)</td>
                                     <td>@trans.Book.Title</td>
                                     <td>@trans.BorrowDate.ToShortDateString()</td>
@@ -162,18 +195,27 @@
                                             <a href="/Admin/ChangeStatus?transId=@trans.TransactionId&value=5" class="btn btn-success">Chấp Nhận</a>
                                             <a href="/Admin/ChangeStatus?transId=@trans.TransactionId&value=6" class="btn btn-danger">Hủy</a>
                                         }
-                                        @if (trans.Status == 1 || trans.Status == 3)
+                                        @if(trans.Status == 1)
                                         {
-                                            <a href="/Admin/ChangeStatus?transId=@trans.TransactionId&value=2" class="btn btn-success">Đã trả</a>
+                                            <a href="javascript:void(0);" onclick="openPopup(@trans.TransactionId,2)" class="btn btn-success">Đã trả</a>
+
+                                        }
+                                        @if ( trans.Status == 3)
+                                        {
+                                            <a href="javascript:void(0);" onclick="openPopup(@trans.TransactionId,2)" class="btn btn-success">Đã trả</a>
+                                            <form method="post" asp-page="/Admin/UserManage" asp-page-handler="ToggleStatus" asp-route-userId="@trans.UserId" onsubmit="return confirm('Are you sure you want to ban this user?');">
+                                                <button type="submit" class="btn btn-danger">Khóa</button>
+                                            </form>
                                         }
                                         @if (trans.Status == 5)
                                         {
-                                            <a href="/Admin/ChangeStatus?transId=@trans.TransactionId&value=1" class="btn btn-success">Đã lấy</a>
+                                            <a href="javascript:void(0);" onclick="openPopup(@trans.TransactionId,1)" class="btn btn-success">Đã lấy</a>
                                             <a href="/Admin/ChangeStatus?transId=@trans.TransactionId&value=6" class="btn btn-danger">Hủy</a>
                                         }
                                     </td>
                                 </tr>
                             }
+
                         </tbody>
                     </table>
                 </div>
@@ -182,29 +224,35 @@
         </div>
     </div>
 </div>
+<!-- Modal Popup -->
+<div id="returnBookPopup" class="popup" style="display: none;">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <h3>Chọn tình trạng sách </h3>
+
+        <!-- Form để chọn tình trạng sách -->
+        <form method="get" action="/Admin/ChangeStatus">
+            <input type="hidden" name="transId" id="popupTransId" />
+            <input type="hidden" name="value" id="valueInput" />
+
+            <label for="bookCondition">Tình trạng sách:</label>
+            <select name="bookCondition" id="bookCondition" required>
+                @foreach(var bc in Model.bookConditions)
+                {
+                    <option value="@bc.ConditionId">@bc.ConditionName</option>
+                }
+            </select>
+
+            <button type="submit" class="btn btn-success">Xác nhận</button>
+            <button type="button" onclick="closePopup()" class="btn btn-danger">Hủy</button>
+        </form>
+    </div>
+</div>
+
 <!-- ============================================================== -->
 <!-- end wrapper  -->
 <!-- ============================================================== -->
 
-<script src="~/assets/vendor/jquery/jquery-3.3.1.min.js"></script>
-<!-- bootstrap bundle js-->
-<script src="~/assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
-<!-- slimscroll js-->
-<script src="~/assets/vendor/slimscroll/jquery.slimscroll.js"></script>
-<!-- chartjs js-->
-<script src="~/assets/vendor/charts/charts-bundle/Chart.bundle.js"></script>
-<script src="~/assets/vendor/charts/charts-bundle/chartjs.js"></script>
-
-<!-- main js-->
-<script src="~/assets/libs/js/main-js.js"></script>
-<!-- jvactormap js-->
-<script src="~/assets/vendor/jvectormap/jquery-jvectormap-2.0.2.min.js"></script>
-<script src="~/assets/vendor/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-<!-- sparkline js-->
-<script src="~/assets/vendor/charts/sparkline/jquery.sparkline.js"></script>
-<script src="~/assets/vendor/charts/sparkline/spark-js.js"></script>
-<!-- dashboard sales js-->
-<script src="~/assets/libs/js/dashboard-sales.js"></script>
 <script>
     function sortTable(colIndex) {
         var table = document.getElementById('userTable');
@@ -224,4 +272,15 @@
         rows.forEach(row => table.appendChild(row)); // Cập nhật bảng
         table.setAttribute('data-sort-asc', isAsc); // Đổi hướng sắp xếp
     }
+    function openPopup(transactionId,value) {
+        document.getElementById("popupTransId").value = transactionId;
+        document.getElementById("valueInput").value = value;
+        document.getElementById("returnBookPopup").style.display = "flex";
+    }
+
+    function closePopup() {
+        document.getElementById("returnBookPopup").style.display = "none";
+    }
+
 </script>
+

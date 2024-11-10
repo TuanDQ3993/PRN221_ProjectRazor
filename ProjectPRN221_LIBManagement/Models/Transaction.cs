@@ -13,8 +13,12 @@ namespace ProjectPRN221_LIBManagement.Models
         public DateTime DueDate { get; set; }
         public DateTime? ReturnDate { get; set; }
         public int? Status { get; set; }
+        public int BookConditionOnBorrow { get; set; }
+        public int? BookConditionOnReturn { get; set; }
 
         public virtual Book? Book { get; set; }
+        public virtual BookCondition BookConditionOnBorrowNavigation { get; set; } = null!;
+        public virtual BookCondition? BookConditionOnReturnNavigation { get; set; }
         public virtual Status? StatusNavigation { get; set; }
         public virtual User? User { get; set; }
 

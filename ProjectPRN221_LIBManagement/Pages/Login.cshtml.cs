@@ -19,28 +19,35 @@ namespace ProjectPRN221_LIBManagement.Pages
 		{
 			var user = PRN221_LibContext.Ins.Users
 								   .SingleOrDefault(u => u.Email == Username && u.Password == Password);
-
-			if (user != null)
+			if (user.IsBan== true)
 			{
-				if (user.Role != null)
-				{
-                    HttpContext.Session.SetInt32("UserID", user.UserId);
-                    HttpContext.Session.SetInt32("UserRole", user.Role);
-                    if (user.Role == 1)
-					{
-						return RedirectToPage("/Admin/BooksManage"); 
-					}
-					else
-					{
-
-						return RedirectToPage("home/home");
-					}
-				}
+                ModelState.AddModelError(string.Empty, "Tài khoản đã bị khóa.");
 			}
 			else
 			{
-				ModelState.AddModelError(string.Empty, "Tên đăng nhập hoặc mật khẩu không đúng.");
-			}
+                if (user != null)
+                {
+                    if (user.Role != null)
+                    {
+                        HttpContext.Session.SetInt32("UserID", user.UserId);
+                        HttpContext.Session.SetInt32("UserRole", user.Role);
+                        if (user.Role == 1)
+                        {
+                            return RedirectToPage("/Admin/BooksManage");
+                        }
+                        else
+                        {
+
+                            return RedirectToPage("home/home");
+                        }
+                    }
+                }
+                else
+                {
+                    ModelState.AddModelError(string.Empty, "Tên đăng nhập hoặc mật khẩu không đúng.");
+                }
+            }
+			
 			return Page();
 
 		}

@@ -1,0 +1,143 @@
+﻿@page
+@model ProjectPRN221_LIBManagement.Pages.Admin.TransactionDetailModel
+@{
+
+}
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f7f6;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+        color: #4CAF50;
+        margin-bottom: 20px;
+    }
+
+    .transaction-info {
+        margin-bottom: 30px;
+    }
+
+    .info-item {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0;
+    }
+
+    .label {
+        font-weight: bold;
+        color: #555;
+    }
+
+    .value {
+        font-size: 1.1em;
+        color: #333;
+    }
+
+    .status {
+        font-weight: bold;
+        color: green;
+    }
+
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        width: 100%;
+        transition: background-color 0.3s ease;
+    }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+</style>
+
+<div class="container">
+    <h1>Thông tin Mượn Sách</h1>
+    <div class="transaction-info">
+        <div class="info-item">
+            <span class="label">Mã giao dịch:</span>
+            <span class="value" >@Model.transaction.TransactionId</span>
+        </div>
+        <div class="info-item">
+            <span class="label">Người mượn:</span>
+            <span class="value">@Model.transaction.User.FullName</span>
+        </div>
+        <div class="info-item">
+            <span class="label">Sách:</span>
+            <span class="value">@Model.transaction.Book.Title</span>
+        </div>
+        <div class="info-item">
+            <span class="label">Ngày mượn:</span>
+            <span class="value">@Model.transaction.BorrowDate.ToString("dd/MM/yyyy")</span>
+        </div>
+        <div class="info-item">
+            <span class="label">Ngày trả dự kiến:</span>
+            <span class="value">@Model.transaction.DueDate.ToString("dd/MM/yyyy")</span>
+        </div>
+        <div class="info-item">
+            <span class="label">Ngày trả:</span>
+            @{
+                if (@Model.transaction.ReturnDate == null)
+                {
+                    <span class="value">Chưa trả sách</span>
+                }
+                else
+                {
+                    <span class="value">@Model.transaction.ReturnDate?.ToString("dd/MM/yyyy")</span>
+                }
+            }
+            
+        </div>
+        <div class="info-item">
+            <span class="label">Trạng thái:</span>
+            <span class="value status">@Model.transaction.StatusNavigation.StatusName</span>
+        </div>
+        <div class="info-item">
+            <span class="label">Tình trạng sách khi mượn:</span>
+            <span class="value">@Model.transaction.BookConditionOnBorrowNavigation.ConditionName</span>
+        </div>
+        <div class="info-item">
+            <span class="label">Tình trạng sách khi trả:</span>
+            @{
+                if (@Model.transaction.BookConditionOnReturn == null)
+                {
+                    <span class="value">Chưa trả sách</span>
+                }
+                else
+                {
+                    <span class="value">@Model.transaction.BookConditionOnReturnNavigation.ConditionName</span>
+                }
+            }
+            
+        </div>
+    </div>
+    <button class="back-btn" onclick="window.history.back();">Trở lại</button>
+</div>
