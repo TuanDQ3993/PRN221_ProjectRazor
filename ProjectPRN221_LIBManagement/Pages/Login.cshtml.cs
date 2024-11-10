@@ -32,9 +32,13 @@ namespace ProjectPRN221_LIBManagement.Pages
 
                     HttpContext.Session.SetInt32("UserID", user.UserId);
                     HttpContext.Session.SetInt32("UserRole", user.Role);
-                    if (user.Role == 1)
+                    if (user.Role == 3)
                     {
                         return RedirectToPage("/Admin/BooksManage");
+                    }
+                    else if(user.Role == 3)
+                    {
+                        return RedirectToPage("/Admin2/librianManage");
                     }
                     else
                     {

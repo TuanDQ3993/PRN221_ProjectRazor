@@ -1,0 +1,88 @@
+﻿@page
+@model ProjectPRN221_LIBManagement.Pages.Admin2.AdminDashboard1Model
+
+
+@{
+    Layout = "Admin_Layout";
+}
+
+<div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:35px;">
+        <div class="page-header">
+            <h3 class="mb-2">Admin Dashboard</h3>
+
+
+            <div class="page-breadcrumb">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a asp-page="home" class="breadcrumb-link">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Admin Dashboard</li>
+
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+<div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="text-muted">USERS</h5>
+            <div class="metric-value d-inline-block">
+                    <h1 class="mb-1 text-primary">@Model.TotalUsers </h1>
+            </div>
+            <div class="metric-label d-inline-block float-right text-success">
+                <i class="fa fa-fw fa-caret-up"></i><span></span>
+            </div>
+        </div>
+        <div id="sparkline"></div>
+    </div>
+</div>
+<!-- /. metric -->
+<!-- metric -->
+<div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="text-muted">BOOKS</h5>
+            <div class="metric-value d-inline-block">
+                    <h1 class="mb-1 text-primary">@Model.TotalBooks </h1>
+            </div>
+            <div class="metric-label d-inline-block float-right text-success">
+                <i class="fa fa-fw fa-caret-up"></i><span></span>
+            </div>
+        </div>
+        <div id="sparkline"></div>
+    </div>
+</div>
+    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="text-muted">CATEGORY</h5>
+                <div class="metric-value d-inline-block">
+                    <h1 class="mb-1 text-primary">@Model.TotalCategory </h1>
+                </div>
+                <div class="metric-label d-inline-block float-right text-success">
+                    <i class="fa fa-fw fa-caret-up"></i><span></span>
+                </div>
+            </div>
+            <div id="sparkline"></div>
+        </div>
+    </div>
+<div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+    <div class="card">
+        <div class="card-body">
+                <h5 class="text-muted">TRANSACTION</h5>
+            <div class="metric-value d-inline-block">
+                <h1 class="mb-1 text-primary"> @Model.TotalTransaction </h1>
+            </div>
+            <div class="metric-label d-inline-block float-right text-success">
+                <i class="fa fa-fw fa-caret-up"></i><span></span>
+            </div>
+        </div>
+        <div id="sparkline"></div>
+    </div>
+</div>
+</div>
+
+
+

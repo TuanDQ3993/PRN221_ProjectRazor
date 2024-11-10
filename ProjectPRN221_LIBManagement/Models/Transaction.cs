@@ -6,6 +6,11 @@ namespace ProjectPRN221_LIBManagement.Models
 {
     public partial class Transaction
     {
+        public Transaction()
+        {
+            UserBookLogs = new HashSet<UserBookLog>();
+        }
+
         public int TransactionId { get; set; }
         public int? UserId { get; set; }
         public int? BookId { get; set; }
@@ -15,13 +20,6 @@ namespace ProjectPRN221_LIBManagement.Models
         public int? Status { get; set; }
         public int BookConditionOnBorrow { get; set; }
         public int? BookConditionOnReturn { get; set; }
-
-        public virtual Book? Book { get; set; }
-        public virtual BookCondition BookConditionOnBorrowNavigation { get; set; } = null!;
-        public virtual BookCondition? BookConditionOnReturnNavigation { get; set; }
-        public virtual Status? StatusNavigation { get; set; }
-        public virtual User? User { get; set; }
-
         // Thêm thuộc tính cho tháng
         [NotMapped]
         public int Month { get; set; }
@@ -36,5 +34,11 @@ namespace ProjectPRN221_LIBManagement.Models
 
         [NotMapped]
         public int StatusCount { get; set; }
+        public virtual Book? Book { get; set; }
+        public virtual BookCondition BookConditionOnBorrowNavigation { get; set; } = null!;
+        public virtual BookCondition? BookConditionOnReturnNavigation { get; set; }
+        public virtual Status? StatusNavigation { get; set; }
+        public virtual User? User { get; set; }
+        public virtual ICollection<UserBookLog> UserBookLogs { get; set; }
     }
 }

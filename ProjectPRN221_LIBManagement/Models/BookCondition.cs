@@ -9,6 +9,7 @@ namespace ProjectPRN221_LIBManagement.Models
         {
             TransactionBookConditionOnBorrowNavigations = new HashSet<Transaction>();
             TransactionBookConditionOnReturnNavigations = new HashSet<Transaction>();
+            UserBookLogs = new HashSet<UserBookLog>();
         }
 
         public int ConditionId { get; set; }
@@ -16,5 +17,6 @@ namespace ProjectPRN221_LIBManagement.Models
 
         public virtual ICollection<Transaction> TransactionBookConditionOnBorrowNavigations { get; set; }
         public virtual ICollection<Transaction> TransactionBookConditionOnReturnNavigations { get; set; }
+        public virtual ICollection<UserBookLog> UserBookLogs { get; set; }
     }
 }

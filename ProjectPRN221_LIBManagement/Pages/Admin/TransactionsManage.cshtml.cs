@@ -33,7 +33,7 @@ namespace ProjectPRN221_LIBManagement.Pages.Admin
             
             var role = HttpContext.Session.GetInt32("UserRole");
 
-            if (role == null || role != 1) 
+            if (role == null || role != 3) 
             {
                 return RedirectToPage("/Home/AccessDenied"); 
             }

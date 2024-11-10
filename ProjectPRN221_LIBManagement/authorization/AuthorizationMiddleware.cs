@@ -31,7 +31,25 @@
                 }
 
                 
-                if (role != 1)
+                if (role != 3)
+                {
+                    context.Response.Redirect("/Home/AccessDenied");
+                    return;
+                }
+            }
+
+            if (path.Contains("/Admin2"))
+            {
+
+                if (!context.Session.TryGetValue("UserID", out _))
+                {
+
+                    context.Response.Redirect("/Home/AccessDenied");
+                    return;
+                }
+
+
+                if (role != 3)
                 {
                     context.Response.Redirect("/Home/AccessDenied");
                     return;

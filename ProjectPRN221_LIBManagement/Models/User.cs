@@ -21,6 +21,7 @@ namespace ProjectPRN221_LIBManagement.Models
         public bool? IsBan { get; set; }
 
         public virtual Role RoleNavigation { get; set; } = null!;
+        public virtual UserBookLog? UserBookLog { get; set; }
         public virtual ICollection<Transaction> Transactions { get; set; }
     }
 }
