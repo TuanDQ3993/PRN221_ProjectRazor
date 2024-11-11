@@ -20,7 +20,7 @@
             var role = context.Session.GetInt32("UserRole");
 
 
-            if (path.Contains("/admin"))
+            if (path.StartsWith("/admin"))
             {
               
                 if (!context.Session.TryGetValue("UserID", out _))
@@ -38,7 +38,7 @@
                 }
             }
 
-            if (path.Contains("/Admin2"))
+            if (path.StartsWith("/manager"))
             {
 
                 if (!context.Session.TryGetValue("UserID", out _))
@@ -49,7 +49,7 @@
                 }
 
 
-                if (role != 3)
+                if (role != 1)
                 {
                     context.Response.Redirect("/Home/AccessDenied");
                     return;

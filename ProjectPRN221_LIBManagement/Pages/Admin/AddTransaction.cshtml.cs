@@ -30,7 +30,8 @@ namespace ProjectPRN221_LIBManagement.Pages.Admin
         }
 
         public IActionResult OnPost() {
-            
+            bookCondition = PRN221_LibContext.Ins.BookConditions.ToList();
+
             if (!PRN221_LibContext.Ins.Users.Any(u => u.Email == Email))
             {
                 ModelState.AddModelError("Email", "Email don't exist in the system!");

@@ -36,9 +36,9 @@ namespace ProjectPRN221_LIBManagement.Pages
                     {
                         return RedirectToPage("/Admin/BooksManage");
                     }
-                    else if(user.Role == 3)
+                    else if(user.Role == 1)
                     {
-                        return RedirectToPage("/Admin2/librianManage");
+                        return RedirectToPage("/Manager/AdminDashboard1");
                     }
                     else
                     {
